@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
-/* Animations douces */
-* {
+/* Timing function personnalisée pour les transitions des éléments interactifs */
+a, button, input, select, textarea, [class*="transition"] {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
