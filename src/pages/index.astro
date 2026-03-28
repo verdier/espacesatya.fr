@@ -10,7 +10,7 @@ import PraticienCard from '../components/PraticienCard.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 
-import heroImg from '../assets/photos/DSC_8958.jpg';
+import heroImg from '../assets/photos/hero.jpg';
 import equipeImg from '../assets/photos/equipe.jpeg';
 
 const praticiens = await getCollection('praticiens', ({ data }) => data.actif);
@@ -19,7 +19,7 @@ praticiens.sort((a, b) => a.data.ordre - b.data.ordre);
 const base = import.meta.env.BASE_URL;
 
 const valeurs = [
-  { icon: 'heart', titre: "Approche holistique", texte: "Nous considérons la personne dans sa globalité — corps, esprit, émotions — pour un accompagnement qui touche à la racine des choses." },
+  { icon: 'heart', titre: "Approche holistique", texte: "Nous considérons la personne dans sa globalité – corps, esprit, émotions – pour un accompagnement qui touche à la racine des choses." },
   { icon: 'users', titre: "Pluridisciplinarité", texte: "Sept praticiennes aux expertises complémentaires, qui collaborent pour vous offrir un accompagnement coordonné et cohérent." },
   { icon: 'sun', titre: "Bienveillance", texte: "Un espace sans jugement où chacun est accueilli tel qu'il est, avec sa singularité et son rythme propre." },
 ];
@@ -27,7 +27,7 @@ const valeurs = [
 
 <BaseLayout
   title="Accueil"
-  description="Espace Satya — Cabinet pluridisciplinaire de bien-être à Elne. Yoga, psychologie, sophrologie, hypnothérapie, massages, soins énergétiques et diététique."
+  description="Espace Satya – Cabinet pluridisciplinaire de bien-être à Elne. Yoga, psychologie, sophrologie, hypnothérapie, massages, soins énergétiques et diététique."
 >
 
     <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
@@ -46,7 +46,7 @@ const valeurs = [
       </p>
       <p class="font-body text-warm-300 mb-10 flex items-center justify-center gap-2">
         <Icon name="location" class="w-4 h-4 text-sage-300 shrink-0" strokeWidth={1.5} />
-        17 bd des Évadés de France — Elne (66)
+        17 bd des Évadés de France – Elne (66)
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <Button href={`${base}praticiens/`} size="lg" shadow="lg" class="justify-center">
@@ -71,7 +71,7 @@ const valeurs = [
             </h2>
             <div class="space-y-4 font-body text-warm-600 leading-relaxed">
               <p>Nichée au cœur d'Elne, dans les Pyrénées-Orientales, l'Espace Satya est un cabinet pluridisciplinaire réunissant sept praticiennes passionnées, chacune experte dans sa discipline.</p>
-              <p>"Satya" — la vérité en sanskrit — incarne notre philosophie : accompagner chaque personne avec authenticité, sans jugement, vers sa version la plus épanouie d'elle-même.</p>
+              <p>"Satya" – la vérité en sanskrit – incarne notre philosophie : accompagner chaque personne avec authenticité, sans jugement, vers sa version la plus épanouie d'elle-même.</p>
               <p>Yoga, psychologie, sophrologie, hypnothérapie, massages, soins énergétiques, diététique… Des approches complémentaires qui dialoguent pour prendre soin de vous dans votre globalité.</p>
             </div>
             <a href={`${base}contact/`}
@@ -139,15 +139,15 @@ const valeurs = [
       </div>
     </section>
 
-    <!-- ═══ SALLE B3 ══════════════════════════════════════════════════════ -->
-    <CtaSection title="La Salle B3" subtitle="Espace à louer" bgClass="bg-sage-700"
+    <!-- ═══ SALLE LOTUS ══════════════════════════════════════════════════ -->
+    <CtaSection title="La Salle Lotus 🪷" subtitle="Espace à louer" bgClass="bg-sage-700"
       description="38 m² climatisés au cœur d'un cabinet de bien-être."
     >
       <div slot="background" class="absolute inset-0 opacity-5" aria-hidden="true">
         <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.8) 1px, transparent 0); background-size: 32px 32px;"></div>
       </div>
       <p class="font-body text-sage-200 leading-relaxed mb-10 max-w-2xl mx-auto">
-        Cours collectifs, ateliers, formations ou conférences — bénéficiez d'un cadre professionnel et d'une clientèle déjà sensibilisée au bien-être.
+        Cours collectifs, ateliers, formations ou conférences – bénéficiez d'un cadre professionnel et d'une clientèle déjà sensibilisée au bien-être.
       </p>
       <div class="flex flex-wrap justify-center gap-4 mb-10">
         {[
@@ -182,8 +182,8 @@ const valeurs = [
         <p class="font-body text-warm-500 mb-8">Facilement accessible depuis Perpignan et la côte méditerranéenne.</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
           {[
-            { icon: 'location', title: 'Adresse', content: '17 bd des Évadés de France\n1er étage — Épicentre\n66200 Elne' },
-            { icon: 'clock', title: 'Horaires', content: 'Lundi — Samedi\nsur rendez-vous' },
+            { icon: 'location', title: 'Adresse', content: '17 bd des Évadés de France\n1er étage – Épicentre\n66200 Elne' },
+            { icon: 'clock', title: 'Horaires', content: 'Lundi – Samedi\nsur rendez-vous' },
             { icon: 'lightning', title: 'Accès', content: 'Parking gratuit\n15 min de Perpignan\n10 min d\'Argelès' },
           ].map((item) => (
             <InfoCard icon={item.icon} title={item.title} description={item.content} />

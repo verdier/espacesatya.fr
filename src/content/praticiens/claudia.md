@@ -9,7 +9,7 @@ specialites:
   - "Détente"
   - "Récupération"
   - "Lâcher-prise"
-photo: "../../assets/photos/DSC_8966.jpg"
+photo: "../../assets/photos/praticiens/claudia-1.jpg"
 photoAlt: "Claudia, praticienne en massages et soins à l'Espace Satya d'Elne"
 ordre: 4
 actif: true
@@ -23,12 +23,12 @@ Chaque séance est pensée selon vos besoins du moment : récupération après u
 
 ## Ce que je propose
 
-- **Massage de relaxation** — Effleurages doux pour relâcher les tensions et apaiser l'esprit
-- **Massage profond** — Travail en profondeur sur les nœuds musculaires et tensions persistantes
-- **Massage du dos et des épaules** — Ciblé pour les personnes sédentaires ou stressées
-- **Soins du visage** — Drainage, modelage, revitalisation
-- **Massage aux huiles** — Utilisation d'huiles essentielles sélectionnées pour leurs propriétés thérapeutiques
-- **Soins de récupération sportive** — Pour les sportifs souhaitant optimiser leur récupération
+- **Massage de relaxation** – Effleurages doux pour relâcher les tensions et apaiser l'esprit
+- **Massage profond** – Travail en profondeur sur les nœuds musculaires et tensions persistantes
+- **Massage du dos et des épaules** – Ciblé pour les personnes sédentaires ou stressées
+- **Soins du visage** – Drainage, modelage, revitalisation
+- **Massage aux huiles** – Utilisation d'huiles essentielles sélectionnées pour leurs propriétés thérapeutiques
+- **Soins de récupération sportive** – Pour les sportifs souhaitant optimiser leur récupération
 
 ## Pour qui ?
 

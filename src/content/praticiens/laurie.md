@@ -9,7 +9,7 @@ specialites:
   - "Sommeil"
   - "Relaxation"
   - "Respiration"
-photo: "../../assets/photos/DSC_8962.jpg"
+photo: "../../assets/photos/praticiens/laurie-1.jpg"
 photoAlt: "Laurie, sophrologue à l'Espace Satya d'Elne"
 ordre: 2
 actif: true
@@ -23,12 +23,12 @@ Je vous accompagne dans un espace de confiance, à votre rythme, pour retrouver 
 
 ## Ce que je propose
 
-- **Gestion du stress et de l'anxiété** — Techniques pratiques à intégrer dans votre quotidien
-- **Amélioration du sommeil** — Protocoles de relaxation pour retrouver un sommeil réparateur
-- **Gestion des émotions** — Mieux comprendre et apprivoiser ses émotions
-- **Confiance en soi** — Renforcer l'estime de soi et les ressources positives
-- **Préparation mentale** — Examens, compétitions, prises de parole en public
-- **Accompagnement périnatal** — Préparation à l'accouchement et sophrologie post-partum
+- **Gestion du stress et de l'anxiété** – Techniques pratiques à intégrer dans votre quotidien
+- **Amélioration du sommeil** – Protocoles de relaxation pour retrouver un sommeil réparateur
+- **Gestion des émotions** – Mieux comprendre et apprivoiser ses émotions
+- **Confiance en soi** – Renforcer l'estime de soi et les ressources positives
+- **Préparation mentale** – Examens, compétitions, prises de parole en public
+- **Accompagnement périnatal** – Préparation à l'accouchement et sophrologie post-partum
 
 ## Pour qui ?
 

@@ -1,6 +1,6 @@
 ---
 nom: "Pauline"
-titre: "Psychothérapeute — La psy des petits"
+titre: "Psychothérapeute – La psy des petits"
 sousTitre: "La psy des petits"
 accroche: "Spécialisée dans l'accompagnement des enfants (dès 3 ans), adolescents et jeunes adultes, Pauline crée un espace de soin bienveillant adapté à chaque âge."
 description: "Pauline est psychothérapeute spécialisée dans l'accompagnement des jeunes. Elle propose un suivi adapté aux enfants dès 3 ans, aux adolescents et aux jeunes adultes, utilisant des approches ludiques et créatives pour les plus jeunes."
@@ -10,7 +10,7 @@ specialites:
   - "Jeunes adultes"
   - "Thérapie par le jeu"
   - "Difficultés scolaires"
-photo: "../../assets/photos/DSC_8970.jpg"
+photo: "../../assets/photos/praticiens/pauline-1.jpg"
 photoAlt: "Pauline, psychothérapeute spécialisée enfants et adolescents à l'Espace Satya d'Elne"
 ordre: 6
 actif: true

@@ -9,7 +9,7 @@ specialites:
   - "Équilibre énergétique"
   - "Harmonisation"
   - "KP"
-photo: "../../assets/photos/DSC_8967.jpg"
+photo: "../../assets/photos/praticiens/karine-1.jpg"
 photoAlt: "Karine, praticienne en soins énergétiques et magnétisme à l'Espace Satya d'Elne"
 ordre: 5
 actif: true
@@ -17,17 +17,17 @@ actif: true
 
 ## Mon approche
 
-Notre corps est parcouru par des courants d'énergie vitale. Lorsque ces flux sont perturbés — par le stress, les émotions, les chocs de la vie — des déséquilibres apparaissent, parfois bien avant que la maladie ne se manifeste physiquement.
+Notre corps est parcouru par des courants d'énergie vitale. Lorsque ces flux sont perturbés – par le stress, les émotions, les chocs de la vie – des déséquilibres apparaissent, parfois bien avant que la maladie ne se manifeste physiquement.
 
 Le magnétisme et les soins énergétiques travaillent à rétablir la circulation naturelle de cette énergie, favorisant ainsi l'autoguérison et le retour à l'équilibre. Je travaille avec respect et éthique, dans une relation de confiance avec chacun de mes clients.
 
 ## Ce que je propose
 
-- **Soins énergétiques** — Rééquilibrage des flux d'énergie du corps et des chakras
-- **Magnétisme (KP)** — Technique de magnétisme pour soulager les douleurs, le stress et les tensions
-- **Harmonisation énergétique** — Nettoyage et revitalisation du champ énergétique
-- **Accompagnement en période de fragilité** — Soutien lors de changements de vie, deuils, maladies
-- **Soins à distance** — Disponibles pour les personnes ne pouvant se déplacer
+- **Soins énergétiques** – Rééquilibrage des flux d'énergie du corps et des chakras
+- **Magnétisme (KP)** – Technique de magnétisme pour soulager les douleurs, le stress et les tensions
+- **Harmonisation énergétique** – Nettoyage et revitalisation du champ énergétique
+- **Accompagnement en période de fragilité** – Soutien lors de changements de vie, deuils, maladies
+- **Soins à distance** – Disponibles pour les personnes ne pouvant se déplacer
 
 ## Pour qui ?
 

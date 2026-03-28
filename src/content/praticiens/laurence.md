@@ -9,7 +9,7 @@ specialites:
   - "Blocages émotionnels"
   - "Peurs & phobies"
   - "Comportements limitants"
-photo: "../../assets/photos/DSC_8964.jpg"
+photo: "../../assets/photos/praticiens/laurence-1.jpg"
 photoAlt: "Laurence, hypnothérapeute et praticienne EFT à l'Espace Satya d'Elne"
 ordre: 3
 actif: true
@@ -23,13 +23,13 @@ Mon accompagnement est bienveillant, respectueux et centré sur vos ressources. 
 
 ## Ce que je propose
 
-- **Hypnothérapie** — Accès à l'inconscient pour dénouer les blocages à la source
-- **EFT (tapping)** — Stimulation de points d'acupuncture pour libérer les charges émotionnelles
-- **Gestion des peurs et phobies** — Phobies sociales, peur de l'avion, des araignées, etc.
-- **Arrêt du tabac** — Accompagnement par hypnose pour se libérer de l'addiction
-- **Gestion du poids** — Reprogrammation des comportements alimentaires inconscients
-- **Confiance en soi** — Dissoudre les croyances limitantes héritées du passé
-- **Gestion des traumatismes** — Traitement doux des émotions difficiles
+- **Hypnothérapie** – Accès à l'inconscient pour dénouer les blocages à la source
+- **EFT (tapping)** – Stimulation de points d'acupuncture pour libérer les charges émotionnelles
+- **Gestion des peurs et phobies** – Phobies sociales, peur de l'avion, des araignées, etc.
+- **Arrêt du tabac** – Accompagnement par hypnose pour se libérer de l'addiction
+- **Gestion du poids** – Reprogrammation des comportements alimentaires inconscients
+- **Confiance en soi** – Dissoudre les croyances limitantes héritées du passé
+- **Gestion des traumatismes** – Traitement doux des émotions difficiles
 
 ## Pour qui ?
 
