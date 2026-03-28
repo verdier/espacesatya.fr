@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PraticienCard from '../../components/PraticienCard.astro';
+import { getCollection } from 'astro:content';
+
+const praticiens = await getCollection('praticiens', ({ data }) => data.actif);
+praticiens.sort((a, b) => a.data.ordre - b.data.ordre);
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Nos Praticien·ne·s"
+  description="Découvrez les 7 praticiennes de l'Espace Satya à Elne : yoga, psychologie, sophrologie, hypnothérapie, massages, soins énergétiques et diététique."
+>
+  <Header />
+  <main>
+
+    <!-- Header de page -->
+    <section class="bg-gradient-to-br from-sage-100 to-warm-100 py-16 md:py-20 px-4 md:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="font-accent text-sage-600 text-xl mb-3">L'équipe</p>
+        <h1 class="font-heading text-5xl md:text-6xl font-light text-warm-900 mb-5 leading-tight">
+          Nos praticien·ne·s
+        </h1>
+        <p class="font-body text-warm-600 text-lg leading-relaxed max-w-2xl mx-auto">
+          Sept spécialistes du bien-être, rassemblées dans un même espace pour vous accompagner avec expertise et bienveillance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Grille praticiens -->
+    <section class="py-16 md:py-20 px-4 md:px-8 bg-warm-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {praticiens.map((p) => (
+            <PraticienCard
+              nom={p.data.nom}
+              titre={p.data.titre}
+              sousTitre={p.data.sousTitre}
+              slug={p.id}
+              photo={p.data.photo}
+              photoAlt={p.data.photoAlt}
+              accroche={p.data.accroche}
+              specialites={p.data.specialites}
+              nouveau={p.data.nouveau}
+              variant="full"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Encart Duo Pauline + Cloé -->
+    <section class="py-12 px-4 md:px-8 bg-terra-50">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border-l-4 border-terra-400">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-terra-100 rounded-full flex items-center justify-center shrink-0 mt-1">
+              <svg class="w-6 h-6 text-terra-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-body text-terra-600 text-sm font-semibold uppercase tracking-wide mb-2">Collaboration unique</p>
+              <h2 class="font-heading text-2xl md:text-3xl font-semibold text-warm-900 mb-3">
+                Duo Pauline + Cloé
+              </h2>
+              <p class="font-body text-warm-600 leading-relaxed mb-4">
+                Pour les troubles alimentaires chez les enfants, adolescents et jeunes adultes, Pauline (psychothérapeute) et Cloé (diététicienne) travaillent en binôme. Une prise en charge coordonnée qui associe le soin psychologique et l'accompagnement nutritionnel pour une approche vraiment complète.
+              </p>
+              <a
+                href={`${base}contact/`}
+                class="inline-flex items-center gap-2 font-body text-sm font-semibold text-terra-600 hover:text-terra-700 transition-colors"
+              >
+                En savoir plus
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,311 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+import salleImg1 from '../assets/photos/DSC_8979.jpg';
+import salleImg2 from '../assets/photos/DSC_8980.jpg';
+import salleImg3 from '../assets/photos/DSC_8981.jpg';
+
+const base = import.meta.env.BASE_URL;
+
+const tarifsALaCarte = [
+  { duree: '1 heure', prix: '15 €', desc: 'Idéal pour un créneau ponctuel' },
+  { duree: '2 heures', prix: '25 €', desc: 'Réduction dès 2h' },
+  { duree: '3 heures', prix: '35 €', desc: 'Atelier court' },
+  { duree: 'Demi-journée (4h)', prix: '45 €', desc: 'Matinée ou après-midi', highlight: true },
+  { duree: 'Journée (8h)', prix: '80 €', desc: 'Formation ou stage' },
+  { duree: 'Soirée (18h–22h)', prix: '50 €', desc: 'Créneau très demandé' },
+  { duree: 'Week-end (sam+dim)', prix: '140 €', desc: 'Stage ou retraite' },
+];
+
+const forfaits = [
+  { formule: '1 créneau / semaine (1h30)', prix: '80 €/mois', engagement: '3 mois min.' },
+  { formule: '2 créneaux / semaine (1h30)', prix: '140 €/mois', engagement: '3 mois min.', highlight: true },
+  { formule: '3 créneaux / semaine (1h30)', prix: '190 €/mois', engagement: '3 mois min.' },
+  { formule: 'Demi-journée fixe / semaine', prix: '160 €/mois', engagement: '3 mois min.' },
+  { formule: 'Journée fixe / semaine', prix: '280 €/mois', engagement: '6 mois min.' },
+];
+
+const equipements = [
+  { label: '38 m²', desc: 'Surface dégagée', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' },
+  { label: '15 pers.', desc: 'Capacité maximale', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
+  { label: 'Climatisation', desc: 'Individuelle, toute l\'année', icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' },
+  { label: 'Parking', desc: 'Gratuit, sur place', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+  { label: 'Wi-Fi', desc: 'Inclus dans la location', icon: 'M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0' },
+  { label: 'Équipement', desc: 'Chaises, tables, enceinte BT', icon: 'M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2' },
+];
+
+const usages = [
+  { emoji: '🧘', label: 'Cours collectifs', desc: 'Yoga, pilates, qi gong, méditation, danse' },
+  { emoji: '✨', label: 'Ateliers bien-être', desc: 'Aromathérapie, nutrition, gestion du stress' },
+  { emoji: '📚', label: 'Formations', desc: 'Modules courts, certifications, supervisions' },
+  { emoji: '🎤', label: 'Conférences', desc: 'Santé, bien-être, présentations thématiques' },
+  { emoji: '💬', label: 'Cercles & groupes', desc: 'Parole, constellations, soutien' },
+  { emoji: '🌿', label: 'Retraites urbaines', desc: 'Journées yoga + massage + nutrition' },
+];
+---
+
+<BaseLayout
+  title="La Salle B3"
+  description="Louez la Salle B3 de l'Espace Satya à Elne : 38 m² climatisés pour vos cours collectifs, ateliers, formations. À partir de 15€/h. Parking gratuit."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] flex items-end pb-12 overflow-hidden">
+      <Image
+        src={salleImg1}
+        alt="La Salle B3 de l'Espace Satya à Elne"
+        width={1920}
+        height={900}
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+        quality={80}
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-warm-900/80 via-warm-900/40 to-transparent"></div>
+      <div class="relative z-10 max-w-5xl mx-auto px-4 md:px-8 w-full">
+        <p class="font-accent text-sage-200 text-xl mb-2">Espace à louer</p>
+        <h1 class="font-heading text-5xl md:text-7xl font-light text-white mb-3 leading-tight">La Salle B3</h1>
+        <p class="font-body text-warm-200 text-lg max-w-xl">
+          38 m² climatisés au cœur de l'Espace Satya — idéale pour vos cours collectifs, ateliers et formations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Caractéristiques -->
+    <section class="py-16 md:py-20 px-4 md:px-8 bg-warm-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-4xl font-light text-warm-900 mb-3">Un espace pensé pour votre activité</h2>
+          <p class="font-body text-warm-500 max-w-xl mx-auto">
+            Intégrée dans un cabinet de bien-être actif, la Salle B3 offre un cadre professionnel et chaleureux unique dans le bassin d'Elne.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+          {equipements.map((item) => (
+            <div class="bg-white rounded-2xl p-5 text-center shadow-sm border border-warm-200/50">
+              <div class="w-10 h-10 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-5 h-5 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.icon} />
+                </svg>
+              </div>
+              <p class="font-heading text-warm-900 font-semibold text-sm">{item.label}</p>
+              <p class="font-body text-warm-400 text-xs mt-1 leading-snug">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Description et avantages -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h3 class="font-heading text-3xl font-light text-warm-900 mb-5">Un avantage unique : l'écosystème bien-être</h3>
+            <div class="space-y-4 font-body text-warm-600 leading-relaxed">
+              <p>
+                La Salle B3 ne ressemble à aucune autre salle de location de la région. En étant intégrée dans l'Espace Satya, vous bénéficiez d'une prescription naturelle de la part des 7 praticiennes résidentes et de leur clientèle fidèle.
+              </p>
+              <p>
+                Positionnée entre Perpignan (15 min) et la côte (Argelès-sur-Mer, 10 min), avec le parking gratuit du centre commercial Épicentre, elle est accessible pour un bassin de chalandise de plus de 50 000 habitants.
+              </p>
+            </div>
+            <ul class="mt-6 space-y-3">
+              {[
+                '7 praticiennes sur place = réseau de prescription naturel',
+                'Clientèle déjà sensibilisée au bien-être',
+                'Parking gratuit — accessibilité supérieure aux studios centre-ville',
+                'Climatisation individuelle — atout majeur dans le 66',
+                'Image professionnelle et cadre apaisant',
+              ].map((avantage) => (
+                <li class="flex items-start gap-3 font-body text-sm text-warm-600">
+                  <svg class="w-5 h-5 text-sage-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {avantage}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Galerie mini -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-2xl overflow-hidden shadow-md row-span-2">
+              <Image src={salleImg2} alt="Intérieur de la Salle B3" width={400} height={500}
+                     class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md">
+              <Image src={salleImg3} alt="Espace de la Salle B3" width={400} height={240}
+                     class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md">
+              <Image src={salleImg1} alt="La Salle B3 de l'Espace Satya" width={400} height={240}
+                     class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usages -->
+    <section class="py-16 px-4 md:px-8 bg-warm-100">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="font-heading text-3xl md:text-4xl font-light text-warm-900 mb-3">Pour quelles activités ?</h2>
+          <p class="font-body text-warm-500">La Salle B3 s'adapte à toutes vos pratiques de bien-être.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {usages.map((u) => (
+            <div class="bg-white rounded-2xl p-5 border border-warm-200/50 shadow-sm">
+              <span class="text-2xl mb-3 block">{u.emoji}</span>
+              <h3 class="font-heading text-lg font-semibold text-warm-900 mb-1">{u.label}</h3>
+              <p class="font-body text-sm text-warm-500 leading-relaxed">{u.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section class="py-16 md:py-24 px-4 md:px-8 bg-warm-50" id="tarifs" aria-labelledby="tarifs-title">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <p class="font-accent text-terra-500 text-xl mb-2">Grille tarifaire</p>
+          <h2 id="tarifs-title" class="font-heading text-4xl font-light text-warm-900 mb-3">Tarifs de location</h2>
+          <p class="font-body text-warm-500">Des tarifs adaptés au pouvoir d'achat local, bien en dessous des prix perpignanais.</p>
+        </div>
+
+        <!-- À la carte -->
+        <div class="mb-14">
+          <h3 class="font-heading text-2xl font-semibold text-warm-800 mb-6">Location à la carte</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {tarifsALaCarte.map((t) => (
+              <div class:list={[
+                'rounded-2xl p-6 border-2 transition-colors text-center',
+                t.highlight
+                  ? 'bg-sage-50 border-sage-400 ring-2 ring-sage-200'
+                  : 'bg-white border-warm-200',
+              ]}>
+                {t.highlight && (
+                  <span class="inline-block font-body text-xs font-bold text-sage-600 bg-sage-100 px-2 py-0.5 rounded-full mb-3">
+                    ⭐ Populaire
+                  </span>
+                )}
+                <p class="font-body text-warm-500 text-sm mb-2">{t.duree}</p>
+                <p class="font-heading text-3xl font-semibold text-terra-500 mb-2">{t.prix}</p>
+                <p class="font-body text-warm-400 text-xs">{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Forfaits récurrents -->
+        <div>
+          <h3 class="font-heading text-2xl font-semibold text-warm-800 mb-2">Forfaits récurrents</h3>
+          <p class="font-body text-warm-500 text-sm mb-6">Pour les profs de yoga, pilates, coachs et formateurs avec des créneaux réguliers. Économisez jusqu'à 30%.</p>
+          <div class="bg-white rounded-3xl border border-warm-200 overflow-hidden shadow-sm">
+            <table class="w-full">
+              <thead class="bg-sage-50 border-b border-warm-200">
+                <tr>
+                  <th class="font-body text-sm font-semibold text-warm-700 text-left px-6 py-4">Formule</th>
+                  <th class="font-body text-sm font-semibold text-warm-700 text-center px-6 py-4">Tarif / mois</th>
+                  <th class="font-body text-sm font-semibold text-warm-700 text-center px-6 py-4 hidden sm:table-cell">Engagement</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-warm-100">
+                {forfaits.map((f) => (
+                  <tr class:list={[f.highlight ? 'bg-sage-50/50' : '']}>
+                    <td class="px-6 py-4">
+                      <div class="flex items-center gap-2">
+                        {f.highlight && <span class="text-sage-500 text-xs">★</span>}
+                        <span class="font-body text-warm-700">{f.formule}</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="font-heading text-xl font-semibold text-terra-500">{f.prix}</span>
+                    </td>
+                    <td class="px-6 py-4 text-center hidden sm:table-cell">
+                      <span class="font-body text-sm text-warm-400">{f.engagement}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="font-body text-xs text-warm-400 mt-3 text-center">
+            ✓ RC Pro du locataire requise &nbsp;·&nbsp; ✓ Caution d'un mois de forfait &nbsp;·&nbsp; ✓ Tarif préférentiel pour les praticiennes de l'Espace Satya (-15 à -20%)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulaire de réservation -->
+    <section class="py-16 md:py-20 px-4 md:px-8 bg-warm-100" id="reservation" aria-labelledby="reservation-title">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="font-accent text-sage-600 text-xl mb-2">Prendre contact</p>
+          <h2 id="reservation-title" class="font-heading text-4xl font-light text-warm-900 mb-3">
+            Demander un créneau
+          </h2>
+          <p class="font-body text-warm-500">
+            Remplissez ce formulaire et nous vous recontactons sous 24h pour valider votre demande.
+          </p>
+        </div>
+
+        <form
+          class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-warm-200"
+          name="reservation-salle"
+          method="POST"
+          action={`${base}contact/`}
+        >
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label for="res-nom" class="block font-body text-sm font-semibold text-warm-700 mb-1.5">Nom complet *</label>
+              <input type="text" id="res-nom" name="nom" required
+                class="w-full px-4 py-3 rounded-xl bg-warm-50 border border-warm-200 font-body text-warm-800 placeholder:text-warm-300 focus:outline-none focus:border-sage-400 focus:ring-2 focus:ring-sage-100 transition-all" />
+            </div>
+            <div>
+              <label for="res-email" class="block font-body text-sm font-semibold text-warm-700 mb-1.5">Email *</label>
+              <input type="email" id="res-email" name="email" required
+                class="w-full px-4 py-3 rounded-xl bg-warm-50 border border-warm-200 font-body text-warm-800 placeholder:text-warm-300 focus:outline-none focus:border-sage-400 focus:ring-2 focus:ring-sage-100 transition-all" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label for="res-tel" class="block font-body text-sm font-semibold text-warm-700 mb-1.5">Téléphone</label>
+              <input type="tel" id="res-tel" name="telephone"
+                class="w-full px-4 py-3 rounded-xl bg-warm-50 border border-warm-200 font-body text-warm-800 placeholder:text-warm-300 focus:outline-none focus:border-sage-400 focus:ring-2 focus:ring-sage-100 transition-all" />
+            </div>
+            <div>
+              <label for="res-date" class="block font-body text-sm font-semibold text-warm-700 mb-1.5">Date souhaitée</label>
+              <input type="date" id="res-date" name="date"
+                class="w-full px-4 py-3 rounded-xl bg-warm-50 border border-warm-200 font-body text-warm-800 focus:outline-none focus:border-sage-400 focus:ring-2 focus:ring-sage-100 transition-all" />
+            </div>
+          </div>
+          <div class="mb-5">
+            <label for="res-type" class="block font-body text-sm font-semibold text-warm-700 mb-1.5">Type de location *</label>
+            <select id="res-type" name="type" required
+              class="w-full px-4 py-3 rounded-xl bg-warm-50 border border-warm-200 font-body text-warm-800 focus:outline-none focus:border-sage-400 focus:ring-2 focus:ring-sage-100 transition-all">
+              <option value="">Sélectionner...</option>
+              <option value="ponctuel">Location ponctuelle (à la carte)</option>
+              <option value="forfait">Forfait récurrent mensuel</option>
+              <option value="renseignement">Renseignement général</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <label for="res-message" class="block font-body text-sm font-semibold text-warm-700 mb-1.5">Décrivez votre activité / projet *</label>
+            <textarea id="res-message" name="message" rows={4} required
+              class="w-full px-4 py-3 rounded-xl bg-warm-50 border border-warm-200 font-body text-warm-800 placeholder:text-warm-300 focus:outline-none focus:border-sage-400 focus:ring-2 focus:ring-sage-100 transition-all resize-y"
+              placeholder="Type d'activité, nombre de participants, fréquence envisagée..."></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-sage-500 text-white font-body font-semibold py-4 rounded-full hover:bg-sage-600 transition-colors shadow-md hover:shadow-lg">
+            Envoyer ma demande de réservation
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

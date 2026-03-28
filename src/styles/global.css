@@ -1,1 +1,67 @@
 @import "tailwindcss";
+
+@theme {
+  /* Sage — couleur signature */
+  --color-sage-50: #F4F7F1;
+  --color-sage-100: #DDE8D5;
+  --color-sage-200: #C5D4B8;
+  --color-sage-300: #ADBE9B;
+  --color-sage-400: #9CAF8C;
+  --color-sage-500: #8B9E7C;
+  --color-sage-600: #748A65;
+  --color-sage-700: #5D7A4F;
+  --color-sage-800: #4A6140;
+  --color-sage-900: #374830;
+
+  /* Terracotta — accent chaud */
+  --color-terra-50: #FBF3F0;
+  --color-terra-100: #F0D8CE;
+  --color-terra-200: #E4BBAC;
+  --color-terra-300: #D4A08E;
+  --color-terra-400: #C48874;
+  --color-terra-500: #B5705A;
+  --color-terra-600: #9E5C47;
+  --color-terra-700: #844A3A;
+  --color-terra-800: #6A3B2E;
+  --color-terra-900: #502C22;
+
+  /* Warm — neutres chauds */
+  --color-warm-50: #FAF7F2;
+  --color-warm-100: #F0EBE3;
+  --color-warm-200: #E8E0D4;
+  --color-warm-300: #D4C8B8;
+  --color-warm-400: #B8A898;
+  --color-warm-500: #9C8878;
+  --color-warm-600: #6B5145;
+  --color-warm-700: #5A4339;
+  --color-warm-800: #3D2D26;
+  --color-warm-900: #2D2622;
+
+  /* Typographies */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --font-accent: 'Caveat', cursive;
+}
+
+/* Base styles */
+html {
+  font-family: var(--font-body);
+  background-color: var(--color-warm-50);
+  color: var(--color-warm-900);
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+}
+
+/* Animations douces */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

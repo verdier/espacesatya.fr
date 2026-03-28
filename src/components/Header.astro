@@ -1,0 +1,143 @@
+---
+const base = import.meta.env.BASE_URL;
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: `${base}`, label: 'Accueil' },
+  { href: `${base}praticiens/`, label: 'Nos Praticien·ne·s' },
+  { href: `${base}salle/`, label: 'La Salle' },
+  { href: `${base}contact/`, label: 'Contact' },
+];
+
+function isActive(href: string) {
+  if (href === base || href === `${base}/`) {
+    return currentPath === base || currentPath === `${base}/` || currentPath === `${base}index.html`;
+  }
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="fixed top-0 w-full z-50 transition-all duration-300" id="site-header">
+  <div class="bg-warm-50/90 backdrop-blur-md border-b border-warm-200/50">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <nav class="flex items-center justify-between h-16 md:h-20">
+
+        <!-- Logo -->
+        <a href={base} class="flex items-center gap-3 group" aria-label="Espace Satya — Accueil">
+          <img
+            src={`${base}logo.svg`}
+            alt="Logo Espace Satya"
+            class="h-10 md:h-12 w-auto"
+            loading="eager"
+          />
+          <div class="hidden sm:block">
+            <span class="font-heading text-lg font-semibold text-warm-800 leading-none block">
+              Espace Satya
+            </span>
+            <span class="font-body text-xs text-warm-500 leading-none block mt-0.5">
+              Cabinet pluridisciplinaire
+            </span>
+          </div>
+        </a>
+
+        <!-- Navigation desktop -->
+        <ul class="hidden md:flex items-center gap-1" role="list">
+          {navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class:list={[
+                  'relative font-body text-sm font-medium px-4 py-2 rounded-full transition-all duration-200',
+                  isActive(link.href)
+                    ? 'text-sage-700 bg-sage-100'
+                    : 'text-warm-600 hover:text-sage-700 hover:bg-sage-50',
+                ]}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <!-- CTA desktop -->
+        <a
+          href={`${base}contact/`}
+          class="hidden md:inline-flex items-center gap-2 bg-sage-500 text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-sage-600 transition-colors duration-200 shadow-sm hover:shadow-md"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          Nous contacter
+        </a>
+
+        <!-- Burger menu mobile -->
+        <button
+          id="menu-toggle"
+          class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-warm-100 transition-colors"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="w-6 h-0.5 bg-warm-700 rounded-full transition-all duration-300" id="burger-1"></span>
+          <span class="w-6 h-0.5 bg-warm-700 rounded-full transition-all duration-300" id="burger-2"></span>
+          <span class="w-4 h-0.5 bg-warm-700 rounded-full transition-all duration-300 ml-auto" id="burger-3"></span>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Menu mobile -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden bg-warm-50/95 backdrop-blur-md border-b border-warm-200/50"
+    role="navigation"
+    aria-label="Navigation mobile"
+  >
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'font-body font-medium px-4 py-3 rounded-xl transition-colors duration-200',
+            isActive(link.href)
+              ? 'text-sage-700 bg-sage-100'
+              : 'text-warm-700 hover:text-sage-700 hover:bg-sage-50',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href={`${base}contact/`}
+        class="mt-2 text-center bg-sage-500 text-white font-body font-semibold px-5 py-3 rounded-full hover:bg-sage-600 transition-colors duration-200"
+      >
+        Nous contacter
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="h-16 md:h-20" aria-hidden="true"></div>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const b1 = document.getElementById('burger-1');
+  const b2 = document.getElementById('burger-2');
+  const b3 = document.getElementById('burger-3');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.contains('hidden') === false;
+    menu?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    if (!isOpen) {
+      b1?.classList.add('rotate-45', 'translate-y-2');
+      b2?.classList.add('opacity-0');
+      b3?.classList.add('-rotate-45', '-translate-y-2', 'w-6', 'ml-0');
+    } else {
+      b1?.classList.remove('rotate-45', 'translate-y-2');
+      b2?.classList.remove('opacity-0');
+      b3?.classList.remove('-rotate-45', '-translate-y-2', 'w-6', 'ml-0');
+    }
+  });
+</script>

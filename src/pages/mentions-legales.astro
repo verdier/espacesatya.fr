@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Mentions légales"
+  description="Mentions légales de l'Espace Satya — Cabinet pluridisciplinaire de bien-être à Elne (66)."
+>
+  <Header />
+  <main class="py-16 md:py-24 px-4 md:px-8 bg-warm-50">
+    <div class="max-w-3xl mx-auto">
+      <nav class="mb-8" aria-label="Fil d'Ariane">
+        <a href={base} class="font-body text-sm text-warm-400 hover:text-sage-600 transition-colors">← Retour à l'accueil</a>
+      </nav>
+      <h1 class="font-heading text-4xl font-light text-warm-900 mb-10">Mentions légales</h1>
+      <div class="space-y-10 font-body text-warm-600 leading-relaxed">
+        <section>
+          <h2 class="font-heading text-2xl font-semibold text-warm-800 mb-4">Éditeur du site</h2>
+          <p>Espace Satya<br />17 boulevard des Évadés de France, 1er étage<br />66200 Elne, France</p>
+          <p class="mt-2">Email : <a href="mailto:contact@espacesatya.fr" class="text-sage-600 hover:text-sage-700">contact@espacesatya.fr</a></p>
+        </section>
+        <section>
+          <h2 class="font-heading text-2xl font-semibold text-warm-800 mb-4">Hébergement</h2>
+          <p>Ce site est hébergé sur GitHub Pages.<br />GitHub, Inc. — 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
+        </section>
+        <section>
+          <h2 class="font-heading text-2xl font-semibold text-warm-800 mb-4">Propriété intellectuelle</h2>
+          <p>L'ensemble du contenu de ce site (textes, photographies, logo, design) est la propriété exclusive de l'Espace Satya. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+        </section>
+        <section>
+          <h2 class="font-heading text-2xl font-semibold text-warm-800 mb-4">Données personnelles</h2>
+          <p>Les informations recueillies via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
