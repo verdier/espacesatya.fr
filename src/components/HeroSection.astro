@@ -55,7 +55,7 @@ const CONTENT_CLASSES: Record<string, string> = {
   />
   <div class:list={['absolute inset-0', overlayClass]} />
   {radialShadow && (
-    <div class="absolute inset-0 z-[5] pointer-events-none" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 50%, transparent 80%)" aria-hidden="true"></div>
+    <div class="absolute inset-0 z-[5] pointer-events-none" style="background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 40%, transparent 70%)" aria-hidden="true"></div>
   )}
   <div class:list={['relative z-10', contentMaxWidth, CONTENT_CLASSES[contentAlign]]}>
     <slot />
