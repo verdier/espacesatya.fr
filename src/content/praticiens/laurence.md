@@ -10,6 +10,19 @@ specialites:
   - "Anxiété"
   - "Douleurs persistantes"
   - "Tensions physiques et émotionnelles"
+tarifs:
+  - prestation: "Hypnothérapie"
+    description: "Accès à l'inconscient pour dénouer les blocages à la source"
+  - prestation: "EFT (tapping)"
+    description: "Stimulation de points d'acupuncture pour libérer les charges émotionnelles"
+  - prestation: "Stress chronique et anxiété"
+    description: "Accompagnement pour retrouver calme et sérénité au quotidien"
+  - prestation: "Douleurs persistantes"
+    description: "Travail sur la composante émotionnelle de la douleur"
+  - prestation: "Tensions physiques et émotionnelles"
+    description: "Libération des tensions accumulées dans le corps et l'esprit"
+  - prestation: "Confiance en soi"
+    description: "Dissoudre les croyances limitantes héritées du passé"
 photo: "../../assets/photos/praticiens/laurence-1.jpg"
 photoAlt: "Laurence, hypnothérapeute et praticienne EFT à l'Espace Satya d'Elne"
 ordre: 3
@@ -22,15 +35,6 @@ siteWeb: "https://www.facebook.com/people/Laurence-Gaudy/61587349582218/"
 L'hypnothérapie et l'EFT (Emotional Freedom Techniques) sont deux outils puissants qui s'adressent aux dimensions inconscientes de notre être. Là où la parole seule atteint ses limites, ces techniques permettent d'accéder aux couches profondes de nos mémoires émotionnelles pour les transformer.
 
 Mon accompagnement est bienveillant, respectueux et centré sur vos ressources. Vous restez acteur de votre changement.
-
-## Ce que je propose
-
-- **Hypnothérapie** – Accès à l'inconscient pour dénouer les blocages à la source
-- **EFT (tapping)** – Stimulation de points d'acupuncture pour libérer les charges émotionnelles
-- **Stress chronique et anxiété** – Accompagnement pour retrouver calme et sérénité au quotidien
-- **Douleurs persistantes** – Travail sur la composante émotionnelle de la douleur
-- **Tensions physiques et émotionnelles** – Libération des tensions accumulées dans le corps et l'esprit
-- **Confiance en soi** – Dissoudre les croyances limitantes héritées du passé
 
 ## Pour qui ?
 

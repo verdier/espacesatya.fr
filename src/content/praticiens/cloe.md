@@ -13,17 +13,21 @@ specialites:
   - "Nutrition pédiatrique"
 tarifs:
   - prestation: "Accompagnement 1 mois – Conseil"
+    description: "Premier bilan et remise à plat des habitudes alimentaires pour poser des bases solides et adaptées."
     prix: "105 €"
     note: "Bilan nutritionnel (60 €) + suivi (45 €)"
   - prestation: "Accompagnement 6 mois – Santé"
+    description: "Suivi en profondeur pour une évolution progressive et une meilleure compréhension du corps."
     prix: "270 €"
     note: "Remise de 15 € incluse"
   - prestation: "Accompagnement 12 mois – Vitalité"
+    description: "Transformation durable avec suivi global et adaptation continue aux évolutions de vie."
     prix: "495 €"
     note: "Remise de 60 € incluse"
   - prestation: "Accompagnement TCA (duo avec psychothérapeute)"
+    description: "Prise en charge des troubles du comportement alimentaire en duo avec Pauline (psychothérapeute)."
     prix: "220 €"
-    note: "2 séances en duo + groupe de parole"
+    note: "2 séances en duo + groupe de parole. Paiement en plusieurs fois possible, remboursement mutuelle possible."
 photo: "../../assets/photos/praticiens/cloe-1.jpg"
 photoAlt: "Cloé, diététicienne à l'Espace Satya d'Elne"
 ordre: 7
@@ -38,15 +42,6 @@ Je défends une diététique humaine, bienveillante et individualisée, fondée 
 Mon accompagnement ne se limite pas à l'alimentation : il prend en compte l'ensemble du mode de vie (rythmes, habitudes, contraintes, environnement, relation à l'alimentation), afin de proposer des solutions réalistes, applicables et pérennes.
 
 J'ai développé la **Méthode C.S.V** – Conseil, Santé, Vitalité – une approche structurée en trois formules complémentaires pour un suivi progressif et évolutif, en fonction des besoins et du rythme de chacun.
-
-## Ce que je propose
-
-- **Accompagnement 1 mois – Conseil** – Idéal pour un premier bilan, une remise à plat des habitudes alimentaires ou un besoin ponctuel. Objectif : poser des bases solides et adaptées.
-- **Accompagnement 6 mois – Santé** – Un suivi intermédiaire pour un travail en profondeur, une évolution progressive et une meilleure compréhension du fonctionnement du corps.
-- **Accompagnement 12 mois – Vitalité** – Un accompagnement long pour une transformation durable, un suivi global et une adaptation continue aux évolutions de vie.
-- **Accompagnement TCA** – Prise en charge spécifique des troubles du comportement alimentaire, en consultation duo avec Pauline (psychothérapeute), avec possibilité de participer à un groupe de parole.
-
-Règlement possible en une ou plusieurs fois. Certaines mutuelles proposent un remboursement partiel ou total des consultations de diététique.
 
 ## Pour qui ?
 

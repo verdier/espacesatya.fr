@@ -11,17 +11,25 @@ specialites:
   - "Soins à distance"
 tarifs:
   - prestation: "Soin Énergétique"
+    description: "Soin ciblé pour relâcher les tensions du corps et du mental, retrouver énergie et apaisement. Suivi d'un soin 21 jours plus tard."
     prix: "60 €"
     duree: "1h"
+    note: "En cabinet ou à distance"
   - prestation: "Accompagnement V.I.B.R.A.T.I.O.N. (3 séances)"
+    description: "Chemin sur 3 semaines pour alléger le corps et apaiser le mental, suivi d'une retraite en pleine nature."
     prix: "180 €"
     duree: "3 semaines"
+  - prestation: "Suivi préventif"
+    description: "Accompagnement au rythme de 3 mois pour maintenir votre énergie et entretenir votre équilibre."
   - prestation: "Retraite seule"
     prix: "530 €"
     duree: "Week-end (vendredi au dimanche)"
     note: "Logement et repas compris"
   - prestation: "Pack complet (accompagnement + retraite)"
     prix: "650 €"
+    note: "Paiement possible en plusieurs fois"
+  - prestation: "Soins à distance"
+    description: "Disponibles à l'aide d'une photo, par SMS ou WhatsApp."
 photo: "../../assets/photos/praticiens/karine-1.jpg"
 photoAlt: "Karine, praticienne en soins énergétiques et magnétisme à l'Espace Satya d'Elne"
 ordre: 5
@@ -34,15 +42,6 @@ siteWeb: "https://karine-pigeon-energeticienne.fr"
 Après des années à prendre soin des autres en tant qu'infirmière, j'ai fini par m'oublier et m'épuiser profondément. Un jour, j'ai compris que je devais me choisir, me respecter et retrouver ma place.
 
 Aujourd'hui, j'accompagne les femmes grâce aux soins énergétiques, à l'écoute et à un travail intérieur qui aide à alléger ce qui pèse et à retrouver plus d'équilibre. Dans ma pratique, la douceur et la bienveillance sont essentielles. Je crée un espace où vous pouvez vous déposer en confiance et avancer à votre rythme.
-
-## Ce que je propose
-
-- **Soin Énergétique** – Un soin ciblé sur votre problématique pour relâcher les tensions du corps et du mental, retrouver énergie, clarté intérieure et apaisement. Suivi d'un second soin 21 jours plus tard pour soutenir l'intégration. En cabinet ou à distance.
-- **Accompagnement V.I.B.R.A.T.I.O.N.** – Un chemin sur 3 semaines (1 séance hebdomadaire) pour alléger le corps et apaiser le mental, suivi d'une retraite en pleine nature pour intégrer la transformation.
-- **Suivi préventif** – Un accompagnement au rythme de 3 mois pour maintenir votre énergie et entretenir votre équilibre.
-- **Soins à distance** – Disponibles à l'aide d'une photo, par SMS ou WhatsApp.
-
-Paiement possible en plusieurs fois.
 
 ## Pour qui ?
 

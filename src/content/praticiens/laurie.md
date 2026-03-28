@@ -10,6 +10,17 @@ specialites:
   - "Gestion des douleurs"
   - "Phobies"
   - "Préparation mentale"
+tarifs:
+  - prestation: "Gestion des émotions"
+    description: "Stress, anxiété, surmenage"
+  - prestation: "Gestion des douleurs"
+    description: "Qu'elles soient chroniques ou ponctuelles"
+  - prestation: "Gestion des troubles du sommeil"
+    description: "Difficultés à l'endormissement, réveils fréquents"
+  - prestation: "Désamorcer des phobies"
+    description: "Par exemple l'arachnophobie ou d'autres peurs"
+  - prestation: "Préparation mentale"
+    description: "Examen, entretien, concours, compétition sportive, accouchement ou tout autre événement de vie"
 telephone: "06 84 23 18 85"
 email: "sophrolaurie@outlook.fr"
 photo: "../../assets/photos/praticiens/laurie-1.jpg"
@@ -25,21 +36,13 @@ Ayant exercé la profession d'infirmière pendant une dizaine d'années, mes div
 
 Aujourd'hui, je propose des accompagnements en sophrologie pour aider les personnes à cheminer vers un apaisement et un mieux-être. Chaque accompagnement est personnalisé, s'adaptant aux spécificités de chacun.
 
-## Ce que je propose
-
-- **Gestion des émotions** – Stress, anxiété, surmenage
-- **Gestion des douleurs** – Qu'elles soient chroniques ou ponctuelles
-- **Gestion des troubles du sommeil** – Difficultés à l'endormissement, réveils fréquents
-- **Désamorcer des phobies** – Par exemple l'arachnophobie ou d'autres peurs
-- **Préparation mentale** – Examen, entretien, concours, compétition sportive, accouchement ou tout autre événement de vie
+## Informations pratiques
 
 Je m'adapte à vos besoins :
 
 - **En cabinet** à Elne, dans un espace dédié permettant écoute et détente en toute sécurité
 - **En visio** et **à domicile** (me contacter avant de réserver pour une prestation à domicile)
 - **Séances de groupe** de 5 à 10 personnes (me contacter pour définir vos besoins et le lieu d'intervention)
-
-## Informations pratiques
 
 - Moyens de règlement : espèces, chèques, virement
 - Parking gratuit devant le cabinet

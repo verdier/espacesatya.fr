@@ -1,18 +1,20 @@
 ---
 interface Props {
   prestation: string;
+  description?: string;
   prix?: string;
   duree?: string;
   note?: string;
 }
 
-const { prestation, prix, duree, note } = Astro.props;
+const { prestation, description, prix, duree, note } = Astro.props;
 ---
 
 <div class="bg-white rounded-2xl p-5 border border-warm-200 shadow-sm hover:shadow-md transition-shadow">
   <div class="flex items-start justify-between gap-3">
     <div class="min-w-0">
       <p class="font-body font-semibold text-warm-800">{prestation}</p>
+      {description && <p class="font-body text-sm text-warm-500 leading-relaxed line-clamp-2 mt-0.5">{description}</p>}
       {duree && <p class="font-body text-sm text-warm-400 mt-0.5">{duree}</p>}
       {note && <p class="font-body text-xs text-sage-600 mt-1">{note}</p>}
     </div>

@@ -3,6 +3,7 @@ import TarifCard from './TarifCard.astro';
 
 interface Tarif {
   prestation: string;
+  description?: string;
   prix?: string;
   duree?: string;
   note?: string;
@@ -13,16 +14,18 @@ interface Props {
   title?: string;
 }
 
-const { tarifs, title = 'Tarifs & Prestations' } = Astro.props;
+const { tarifs, title } = Astro.props;
+const displayTitle = title ?? (tarifs?.some(t => t.prix) ? 'Tarifs & Prestations' : 'Prestations');
 ---
 
 {tarifs && tarifs.length > 0 && (
   <div class="mt-12 pt-10 border-t border-warm-200">
-    <h2 class="font-heading text-3xl font-light text-warm-900 mb-6">{title}</h2>
+    <h2 class="font-heading text-3xl font-light text-warm-900 mb-6">{displayTitle}</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {tarifs.map((t) => (
         <TarifCard
           prestation={t.prestation}
+          description={t.description}
           prix={t.prix}
           duree={t.duree}
           note={t.note}

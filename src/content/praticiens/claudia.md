@@ -11,34 +11,44 @@ specialites:
   - "Épilations"
 tarifs:
   - prestation: "Massage Signature Claudia"
+    description: "Massage relaxant corps entier aux huiles essentielles"
     prix: "45 €"
     duree: "1h"
   - prestation: "Massage relaxant corps"
+    description: "Dénouer les tensions, évacuer le stress, retrouver légèreté et mobilité"
     prix: "35 €"
     duree: "30 min"
   - prestation: "Massage jambes légères"
+    description: "Modelage drainant pour stimuler le retour veineux et dégonfler les jambes"
     prix: "35 €"
     duree: "30 min"
   - prestation: "Massage crânien pijat kepala"
+    description: "Massage indonésien du cuir chevelu, nuque, épaules, bras et mains"
     prix: "25 €"
     duree: "30 min"
   - prestation: "Massage pierres chaudes arrière corps"
+    description: "Pierres volcaniques basalte pour une détente musculaire profonde et un rééquilibrage énergétique"
     prix: "40 €"
     duree: "30 min"
   - prestation: "Modelage minceur 2 zones"
+    description: "Technique ciblée sur deux zones pour affiner la silhouette"
     prix: "30 €"
     duree: "30 min"
     note: "Packs : 3 séances (85 €), 6 séances (165 €), 9 séances (260 €)"
   - prestation: "Modelage minceur corps entier"
+    description: "Modelage complet du corps pour un résultat harmonieux"
     prix: "60 €"
     duree: "1h"
   - prestation: "Soin du visage éclat"
+    description: "Soin éclat pour révéler la luminosité de votre peau"
     prix: "40 €"
     duree: "30 min"
   - prestation: "Soin du visage hydratant"
+    description: "Soin en profondeur pour nourrir et hydrater votre peau"
     prix: "50 €"
     duree: "1h"
   - prestation: "Soin du visage spécifique"
+    description: "Soin ciblé selon les besoins spécifiques de votre peau"
     prix: "60 €"
     duree: "1h"
   - prestation: "Épilation sourcils (fil ou cire)"
@@ -61,21 +71,6 @@ siteWeb: "https://www.planity.com/claudia-massage-et-soins-66200-elne"
 Masseuse-esthéticienne de profession réglementée et agréée Artisan par la chambre des métiers et de l'artisanat de l'Occitanie, je mets mes 18 ans d'expérience à votre service. Mon parcours m'a conduite dans le plus grand centre de spa de Madagascar, en hôtel spa 4 étoiles, en centre de thalassothérapie et en centre thermal.
 
 Chaque séance est pensée selon vos besoins du moment : récupération, relâchement de tensions, drainage ou simplement un moment de douceur pour vous.
-
-## Ce que je propose
-
-**Massages**
-- **Massage Signature Claudia** – Massage relaxant corps entier aux huiles essentielles
-- **Massage relaxant corps** – Dénouer les tensions, évacuer le stress, retrouver légèreté et mobilité
-- **Massage jambes légères** – Modelage drainant pour stimuler le retour veineux et dégonfler les jambes
-- **Massage crânien pijat kepala** – Massage indonésien du cuir chevelu, nuque, épaules, bras et mains
-- **Massage aux pierres chaudes** – Pierres volcaniques basalte pour une détente musculaire profonde et un rééquilibrage énergétique
-
-**Modelages minceur** – Séances individuelles ou en packs pour un suivi régulier.
-
-**Soins du visage** – Éclat, hydratant ou spécifique selon les besoins de votre peau.
-
-**Épilations** – Sourcils, visage, demi-jambes.
 
 ## Pour qui ?
 

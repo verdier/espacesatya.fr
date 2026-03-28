@@ -8,6 +8,15 @@ specialites:
   - "Psychologie"
   - "Gestion des émotions"
   - "Travail corporel"
+tarifs:
+  - prestation: "Cours de yoga collectifs et individuels"
+    description: "Hatha yoga adapté à tous les niveaux, dans une ambiance chaleureuse et sans jugement"
+  - prestation: "Suivi psychologique individuel"
+    description: "Écoute, soutien et accompagnement dans les moments de vie difficiles"
+  - prestation: "Ateliers combinés yoga & psychologie"
+    description: "Pour aller plus loin dans la compréhension de soi"
+  - prestation: "Gestion du stress et des émotions"
+    description: "Techniques de respiration, pleine conscience et régulation émotionnelle"
 photo: "../../assets/photos/praticiens/justine-1.jpg"
 photoAlt: "Justine, professeure de yoga et psychologue à l'Espace Satya d'Elne"
 ordre: 1
@@ -19,13 +28,6 @@ actif: true
 La pratique du yoga et la psychologie partagent un même objectif : aider l'être humain à mieux se connaître et à vivre en harmonie avec lui-même. C'est cette conviction profonde qui guide mon travail au quotidien.
 
 Je propose un accompagnement global qui ne sépare pas le corps de l'esprit. Chaque séance est une invitation à explorer vos ressources intérieures, à apprivoiser vos émotions et à cultiver une présence bienveillante envers vous-même.
-
-## Ce que je propose
-
-- **Cours de yoga collectifs et individuels** – Hatha yoga adapté à tous les niveaux, dans une ambiance chaleureuse et sans jugement
-- **Suivi psychologique individuel** – Écoute, soutien et accompagnement dans les moments de vie difficiles
-- **Ateliers combinés yoga & psychologie** – Pour aller plus loin dans la compréhension de soi
-- **Gestion du stress et des émotions** – Techniques de respiration, pleine conscience et régulation émotionnelle
 
 ## Pour qui ?
 
