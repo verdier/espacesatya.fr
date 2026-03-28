@@ -4,7 +4,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;family=Nunito+Sans:wght@400&amp;display=swap');
     </style>
   </defs>
-  <g transform="translate(32, 35)" fill="none" stroke="#cb997e" stroke-width="1.2" stroke-linecap="round">
+  <g transform="translate(32, 35)" fill="none" stroke="#ddbea9" stroke-width="1.2" stroke-linecap="round">
     <path d="M -2 0 C -18 -10, -26 -28, -14 -34 C -4 -28, -2 -12, -2 0 Z" opacity="0.6"/>
     <path d="M 2 0 C 16 -14, 28 -30, 18 -36 C 8 -28, 2 -12, 2 0 Z" opacity="0.6"/>
     <path d="M -1 2 C -20 -4, -30 -18, -20 -26 C -10 -18, -2 -4, -1 2 Z"/>
@@ -14,7 +14,7 @@
     <path d="M 0 5 C 2 14, -2 22, -4 28" stroke-width="1.4"/>
     <path d="M -1 16 C 6 12, 10 14, 6 18" stroke-width="0.9"/>
   </g>
-  <line x1="68" y1="14" x2="68" y2="56" stroke="#b7b7a4" stroke-width="0.5" opacity="0.4"/>
+  <line x1="68" y1="14" x2="68" y2="56" stroke="#a5a58d" stroke-width="0.5" opacity="0.3"/>
   <text x="80" y="28" font-family="'Nunito Sans', sans-serif" font-size="10" font-weight="400" fill="#a5a58d" letter-spacing="3.5">ESPACE</text>
-  <text x="80" y="52" font-family="'Cormorant Garamond', serif" font-size="30" font-weight="500" fill="#4d3f35">Satya</text>
+  <text x="80" y="52" font-family="'Cormorant Garamond', serif" font-size="30" font-weight="500" fill="#ffe8d6">Satya</text>
 </svg>
