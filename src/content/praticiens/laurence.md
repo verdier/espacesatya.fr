@@ -1,14 +1,15 @@
 ---
 nom: "Laurence"
 titre: "Hypnothérapeute & Praticienne EFT"
-accroche: "Libérez-vous de vos blocages émotionnels, peurs et comportements limitants grâce à l'hypnothérapie et à l'EFT (Technique de Libération Émotionnelle)."
-description: "Laurence accompagne ses clients vers la libération de leurs blocages profonds avec l'hypnothérapie et l'EFT. Ces approches complémentaires permettent de reprogrammer les croyances limitantes, d'apaiser les peurs et de retrouver son plein potentiel."
+accroche: "Accompagnement des personnes confrontées au stress chronique, à l'anxiété, aux douleurs persistantes et aux tensions physiques ou émotionnelles."
+description: "Laurence accompagne les personnes confrontées au stress chronique, à l'anxiété, aux douleurs persistantes et aux tensions physiques ou émotionnelles grâce à l'hypnothérapie et à l'EFT (Technique de Libération Émotionnelle)."
 specialites:
   - "Hypnothérapie"
   - "EFT"
-  - "Blocages émotionnels"
-  - "Peurs & phobies"
-  - "Comportements limitants"
+  - "Stress chronique"
+  - "Anxiété"
+  - "Douleurs persistantes"
+  - "Tensions physiques et émotionnelles"
 photo: "../../assets/photos/praticiens/laurence-1.jpg"
 photoAlt: "Laurence, hypnothérapeute et praticienne EFT à l'Espace Satya d'Elne"
 ordre: 3
@@ -26,12 +27,11 @@ Mon accompagnement est bienveillant, respectueux et centré sur vos ressources. 
 
 - **Hypnothérapie** – Accès à l'inconscient pour dénouer les blocages à la source
 - **EFT (tapping)** – Stimulation de points d'acupuncture pour libérer les charges émotionnelles
-- **Gestion des peurs et phobies** – Phobies sociales, peur de l'avion, des araignées, etc.
-- **Arrêt du tabac** – Accompagnement par hypnose pour se libérer de l'addiction
-- **Gestion du poids** – Reprogrammation des comportements alimentaires inconscients
+- **Stress chronique et anxiété** – Accompagnement pour retrouver calme et sérénité au quotidien
+- **Douleurs persistantes** – Travail sur la composante émotionnelle de la douleur
+- **Tensions physiques et émotionnelles** – Libération des tensions accumulées dans le corps et l'esprit
 - **Confiance en soi** – Dissoudre les croyances limitantes héritées du passé
-- **Gestion des traumatismes** – Traitement doux des émotions difficiles
 
 ## Pour qui ?
 
-Pour toute personne qui se sent bloquée, répète des schémas indésirables ou souhaite se libérer de poids émotionnels hérités du passé. Aucune expérience préalable n'est nécessaire.
+Pour toute personne confrontée au stress chronique, à l'anxiété, aux douleurs persistantes ou aux tensions physiques et émotionnelles. L'hypnothérapie et l'EFT s'adressent aussi à ceux qui se sentent bloqués ou qui souhaitent se libérer de schémas répétitifs. Aucune expérience préalable n'est nécessaire.

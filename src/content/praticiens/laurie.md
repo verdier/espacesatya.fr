@@ -1,14 +1,17 @@
 ---
 nom: "Laurie"
-titre: "Sophrologue"
-accroche: "Retrouvez sérénité et équilibre grâce à la sophrologie : gestion du stress, amélioration du sommeil, maîtrise des émotions et techniques de respiration."
-description: "Laurie vous accompagne avec la sophrologie pour apprivoiser le stress, apaiser les émotions difficiles, améliorer la qualité du sommeil et retrouver une vie plus sereine. Sa pratique douce et bienveillante s'adapte à chacun."
+titre: "Sophrologue – Sophr'O"
+accroche: "Ancienne infirmière, Laurie vous accompagne avec la sophrologie vers un apaisement et un mieux-être : gestion du stress, des émotions, des douleurs et du sommeil."
+description: "Laurie Ingles, sophrologue certifiée RNCP et ancienne infirmière, propose des accompagnements personnalisés en sophrologie pour cheminer vers l'apaisement et le mieux-être. Séances en cabinet à Elne, en visio, à domicile ou en groupe."
 specialites:
   - "Sophrologie"
-  - "Gestion du stress"
-  - "Sommeil"
-  - "Relaxation"
-  - "Respiration"
+  - "Gestion des émotions et du stress"
+  - "Troubles du sommeil"
+  - "Gestion des douleurs"
+  - "Phobies"
+  - "Préparation mentale"
+telephone: "06 84 23 18 85"
+email: "sophrolaurie@outlook.fr"
 photo: "../../assets/photos/praticiens/laurie-1.jpg"
 photoAlt: "Laurie, sophrologue à l'Espace Satya d'Elne"
 ordre: 2
@@ -18,19 +21,33 @@ siteWeb: "https://www.crenolibre.fr/therapeute/sophrologue/elne/66200/158481-lau
 
 ## Mon approche
 
-La sophrologie est une méthode psychocorporelle qui repose sur des exercices de respiration, de relaxation et de visualisation positive. Simple à apprendre et efficace au quotidien, elle permet de développer une meilleure connaissance de soi et de renforcer ses ressources intérieures.
+Ayant exercé la profession d'infirmière pendant une dizaine d'années, mes diverses expériences m'ont menée vers une formation en sophrologie (certification professionnelle RNCP) afin de prendre soin autrement.
 
-Je vous accompagne dans un espace de confiance, à votre rythme, pour retrouver calme, confiance et énergie.
+Aujourd'hui, je propose des accompagnements en sophrologie pour aider les personnes à cheminer vers un apaisement et un mieux-être. Chaque accompagnement est personnalisé, s'adaptant aux spécificités de chacun.
 
 ## Ce que je propose
 
-- **Gestion du stress et de l'anxiété** – Techniques pratiques à intégrer dans votre quotidien
-- **Amélioration du sommeil** – Protocoles de relaxation pour retrouver un sommeil réparateur
-- **Gestion des émotions** – Mieux comprendre et apprivoiser ses émotions
-- **Confiance en soi** – Renforcer l'estime de soi et les ressources positives
-- **Préparation mentale** – Examens, compétitions, prises de parole en public
-- **Accompagnement périnatal** – Préparation à l'accouchement et sophrologie post-partum
+- **Gestion des émotions** – Stress, anxiété, surmenage
+- **Gestion des douleurs** – Qu'elles soient chroniques ou ponctuelles
+- **Gestion des troubles du sommeil** – Difficultés à l'endormissement, réveils fréquents
+- **Désamorcer des phobies** – Par exemple l'arachnophobie ou d'autres peurs
+- **Préparation mentale** – Examen, entretien, concours, compétition sportive, accouchement ou tout autre événement de vie
+
+Je m'adapte à vos besoins :
+
+- **En cabinet** à Elne, dans un espace dédié permettant écoute et détente en toute sécurité
+- **En visio** et **à domicile** (me contacter avant de réserver pour une prestation à domicile)
+- **Séances de groupe** de 5 à 10 personnes (me contacter pour définir vos besoins et le lieu d'intervention)
+
+## Informations pratiques
+
+- Moyens de règlement : espèces, chèques, virement
+- Parking gratuit devant le cabinet
+- Accès au 1er étage, ascenseur à disposition
+- Pensez à vous rapprocher de votre mutuelle pour une éventuelle prise en charge
 
 ## Pour qui ?
 
-La sophrologie s'adresse à toutes et tous, de l'enfant (dès 6 ans) à l'adulte. Elle est particulièrement indiquée pour les personnes traversant une période de stress intense, souffrant de troubles du sommeil, ou souhaitant développer leur bien-être global.
+La sophrologie s'adresse à toutes et tous. Elle est particulièrement indiquée pour les personnes traversant une période de stress, souffrant de troubles du sommeil, de douleurs chroniques, d'anxiété, ou souhaitant se préparer mentalement à un événement important.
+
+La sophrologie ne se substitue pas à une prise en charge médicale.

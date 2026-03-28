@@ -1,14 +1,26 @@
 ---
 nom: "Karine"
-titre: "Praticienne en Soins Énergétiques / KP Magnétisme"
-accroche: "Retrouvez équilibre et harmonie grâce aux soins énergétiques et au magnétisme, pour une harmonisation profonde de votre être."
-description: "Karine pratique les soins énergétiques et le magnétisme (KP) pour aider à rétablir l'équilibre et la fluidité de votre énergie vitale. Ces pratiques millénaires agissent en douceur sur les corps physique, émotionnel et énergétique."
+titre: "Énergéticienne & Accompagnante du Féminin"
+accroche: "Retrouvez votre énergie, posez vos limites sans culpabilité et reprenez votre juste place grâce aux soins énergétiques."
+description: "Ancienne infirmière, Karine accompagne les femmes épuisées à retrouver équilibre et vitalité grâce aux soins énergétiques. Dans un espace de douceur et de bienveillance, elle aide à alléger ce qui pèse et à se reconnecter à soi."
 specialites:
   - "Soins énergétiques"
-  - "Magnétisme"
-  - "Équilibre énergétique"
-  - "Harmonisation"
-  - "KP"
+  - "Accompagnement du féminin"
+  - "Gestion du stress et de la fatigue"
+  - "Apaisement émotionnel"
+  - "Soins à distance"
+tarifs:
+  - prestation: "Soin Énergétique"
+    prix: "60 €"
+    duree: "1h"
+  - prestation: "Accompagnement V.I.B.R.A.T.I.O.N. (3 séances)"
+    prix: "180 €"
+    duree: "3 semaines"
+  - prestation: "Retraite seule"
+    prix: "530 €"
+    duree: "Week-end (vendredi au dimanche)"
+  - prestation: "Pack complet (accompagnement + retraite)"
+    prix: "650 €"
 photo: "../../assets/photos/praticiens/karine-1.jpg"
 photoAlt: "Karine, praticienne en soins énergétiques et magnétisme à l'Espace Satya d'Elne"
 ordre: 5
@@ -18,18 +30,26 @@ siteWeb: "https://karine-pigeon-energeticienne.fr"
 
 ## Mon approche
 
-Notre corps est parcouru par des courants d'énergie vitale. Lorsque ces flux sont perturbés – par le stress, les émotions, les chocs de la vie – des déséquilibres apparaissent, parfois bien avant que la maladie ne se manifeste physiquement.
+Après des années à prendre soin des autres en tant qu'infirmière, j'ai fini par m'oublier et m'épuiser profondément. Un jour, j'ai compris que je devais me choisir, me respecter et retrouver ma place.
 
-Le magnétisme et les soins énergétiques travaillent à rétablir la circulation naturelle de cette énergie, favorisant ainsi l'autoguérison et le retour à l'équilibre. Je travaille avec respect et éthique, dans une relation de confiance avec chacun de mes clients.
+Aujourd'hui, j'accompagne les femmes grâce aux soins énergétiques, à l'écoute et à un travail intérieur qui aide à alléger ce qui pèse et à retrouver plus d'équilibre. Dans ma pratique, la douceur et la bienveillance sont essentielles. Je crée un espace où vous pouvez vous déposer en confiance et avancer à votre rythme.
 
 ## Ce que je propose
 
-- **Soins énergétiques** – Rééquilibrage des flux d'énergie du corps et des chakras
-- **Magnétisme (KP)** – Technique de magnétisme pour soulager les douleurs, le stress et les tensions
-- **Harmonisation énergétique** – Nettoyage et revitalisation du champ énergétique
-- **Accompagnement en période de fragilité** – Soutien lors de changements de vie, deuils, maladies
-- **Soins à distance** – Disponibles pour les personnes ne pouvant se déplacer
+- **Soin Énergétique** – Un soin ciblé sur votre problématique pour relâcher les tensions du corps et du mental, retrouver énergie, clarté intérieure et apaisement. Suivi d'un second soin 21 jours plus tard pour soutenir l'intégration. En cabinet ou à distance.
+- **Accompagnement V.I.B.R.A.T.I.O.N.** – Un chemin sur 3 semaines (1 séance hebdomadaire) pour alléger le corps et apaiser le mental, suivi d'une retraite en pleine nature pour intégrer la transformation.
+- **Suivi préventif** – Un accompagnement au rythme de 3 mois pour maintenir votre énergie et entretenir votre équilibre.
+- **Soins à distance** – Disponibles à l'aide d'une photo, par SMS ou WhatsApp.
+
+## Tarifs
+
+- **Soin Énergétique** – 60 € la séance (1h)
+- **Accompagnement V.I.B.R.A.T.I.O.N.** – 180 € (3 séances individuelles sur 3 semaines)
+- **Retraite seule** – 530 € (du vendredi 14h au dimanche 15h, logement et repas compris)
+- **Pack complet** (accompagnement + retraite) – 650 €
+
+Paiement possible en plusieurs fois.
 
 ## Pour qui ?
 
-Pour toute personne se sentant épuisée, en manque d'énergie, traversant une période difficile ou simplement désireuse d'explorer les approches énergétiques. Ces soins sont complémentaires à la médecine conventionnelle et ne la remplacent pas.
+Pour les femmes épuisées qui s'oublient à force de donner aux autres, qui sentent que quelque chose s'éteint à l'intérieur : fatigue persistante, nuits agitées, douleurs qui s'installent, charge mentale envahissante. Les soins énergétiques ne remplacent pas un suivi médical ; ils viennent en complément pour soutenir votre mieux-être de manière globale.
