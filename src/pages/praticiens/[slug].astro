@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
 import Button from '../../components/Button.astro';
+import Icon from '../../components/Icon.astro';
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 
@@ -30,8 +29,6 @@ const next = currentIdx < allPraticiens.length - 1 ? allPraticiens[currentIdx + 
   title={`${praticien.data.nom} — ${praticien.data.titre}`}
   description={praticien.data.accroche}
 >
-  <Header />
-  <main>
 
     <!-- Hero praticien -->
     <section class="bg-gradient-to-br from-warm-100 via-warm-50 to-sage-50 py-12 md:py-16 px-4 md:px-8">
@@ -90,9 +87,7 @@ const next = currentIdx < allPraticiens.length - 1 ? allPraticiens[currentIdx + 
                 <a href={`tel:${praticien.data.telephone.replace(/\s/g, '')}`}
                    class="inline-flex items-center gap-3 font-body text-warm-600 hover:text-sage-600 transition-colors">
                   <span class="w-9 h-9 bg-sage-100 rounded-full flex items-center justify-center shrink-0">
-                    <svg class="w-4 h-4 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
+                    <Icon name="phone" class="w-4 h-4 text-sage-600" strokeWidth={1.5} />
                   </span>
                   {praticien.data.telephone}
                 </a>
@@ -101,9 +96,7 @@ const next = currentIdx < allPraticiens.length - 1 ? allPraticiens[currentIdx + 
                 <a href={`mailto:${praticien.data.email}`}
                    class="inline-flex items-center gap-3 font-body text-warm-600 hover:text-sage-600 transition-colors">
                   <span class="w-9 h-9 bg-sage-100 rounded-full flex items-center justify-center shrink-0">
-                    <svg class="w-4 h-4 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+                    <Icon name="email" class="w-4 h-4 text-sage-600" strokeWidth={1.5} />
                   </span>
                   {praticien.data.email}
                 </a>
@@ -112,9 +105,7 @@ const next = currentIdx < allPraticiens.length - 1 ? allPraticiens[currentIdx + 
                 <a href={praticien.data.doctolib} target="_blank" rel="noopener noreferrer"
                    class="inline-flex items-center gap-2 bg-terra-500 text-white font-body font-semibold px-6 py-3 rounded-full hover:bg-terra-600 transition-colors shadow-sm hover:shadow-md mt-2 w-fit">
                   Prendre rendez-vous
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
+                  <Icon name="external-link" class="w-4 h-4" />
                 </a>
               )}
             </div>
@@ -177,9 +168,7 @@ const next = currentIdx < allPraticiens.length - 1 ? allPraticiens[currentIdx + 
           <a href={`${base}praticiens/${prev.id}/`}
              class="flex items-center gap-3 group text-left max-w-[200px]">
             <span class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-sage-100 transition-colors shrink-0">
-              <svg class="w-5 h-5 text-warm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-              </svg>
+              <Icon name="chevron-left" class="w-5 h-5 text-warm-500" />
             </span>
             <div>
               <p class="font-body text-xs text-warm-400">Précédent</p>
@@ -201,15 +190,11 @@ const next = currentIdx < allPraticiens.length - 1 ? allPraticiens[currentIdx + 
               <p class="font-heading text-warm-700 font-medium group-hover:text-sage-600 transition-colors">{next.data.nom}</p>
             </div>
             <span class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-sage-100 transition-colors shrink-0">
-              <svg class="w-5 h-5 text-warm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <Icon name="chevron-right" class="w-5 h-5 text-warm-500" />
             </span>
           </a>
         ) : <div />}
       </div>
     </nav>
 
-  </main>
-  <Footer />
 </BaseLayout>

@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
 import SectionHeader from '../components/SectionHeader.astro';
-import IconBadge from '../components/IconBadge.astro';
+import InfoCard from '../components/InfoCard.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CtaSection from '../components/CtaSection.astro';
 import PraticienCard from '../components/PraticienCard.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
@@ -18,21 +19,9 @@ praticiens.sort((a, b) => a.data.ordre - b.data.ordre);
 const base = import.meta.env.BASE_URL;
 
 const valeurs = [
-  {
-    titre: "Approche holistique",
-    texte: "Nous considérons la personne dans sa globalité — corps, esprit, émotions — pour un accompagnement qui touche à la racine des choses.",
-    iconPath: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
-  },
-  {
-    titre: "Pluridisciplinarité",
-    texte: "Sept praticiennes aux expertises complémentaires, qui collaborent pour vous offrir un accompagnement coordonné et cohérent.",
-    iconPath: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
-  },
-  {
-    titre: "Bienveillance",
-    texte: "Un espace sans jugement où chacun est accueilli tel qu'il est, avec sa singularité et son rythme propre.",
-    iconPath: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
-  },
+  { icon: 'heart', titre: "Approche holistique", texte: "Nous considérons la personne dans sa globalité — corps, esprit, émotions — pour un accompagnement qui touche à la racine des choses." },
+  { icon: 'users', titre: "Pluridisciplinarité", texte: "Sept praticiennes aux expertises complémentaires, qui collaborent pour vous offrir un accompagnement coordonné et cohérent." },
+  { icon: 'sun', titre: "Bienveillance", texte: "Un espace sans jugement où chacun est accueilli tel qu'il est, avec sa singularité et son rythme propre." },
 ];
 ---
 
@@ -40,56 +29,36 @@ const valeurs = [
   title="Accueil"
   description="Espace Satya — Cabinet pluridisciplinaire de bien-être à Elne. Yoga, psychologie, sophrologie, hypnothérapie, massages, soins énergétiques et diététique."
 >
-  <Header />
-  <main>
 
     <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
-    <section class="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
-      <Image
-        src={heroImg}
-        alt="Ambiance chaleureuse de l'Espace Satya à Elne"
-        width={1920}
-        height={1080}
-        class="absolute inset-0 w-full h-full object-cover object-center"
-        loading="eager"
-        decoding="async"
-        quality={80}
-      />
-      <div class="absolute inset-0 bg-gradient-to-br from-warm-900/75 via-warm-800/55 to-sage-900/40"></div>
-      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <p class="font-accent text-sage-200 text-2xl mb-4">Bienvenue à l'</p>
-        <h1 class="font-heading text-6xl md:text-8xl font-light text-white mb-4 leading-tight tracking-wide">
-          Espace Satya
-        </h1>
-        <p class="font-heading text-xl md:text-2xl font-light text-warm-200 mb-3">
-          Cabinet pluridisciplinaire de bien-être
-        </p>
-        <p class="font-body text-warm-300 mb-10 flex items-center justify-center gap-2">
-          <svg class="w-4 h-4 text-sage-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          17 bd des Évadés de France — Elne (66)
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href={`${base}praticiens/`} size="lg" shadow="lg" class="justify-center">
-            Découvrir nos praticien·ne·s
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </Button>
-          <a href={`${base}contact/`}
-             class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-body font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all duration-300">
-            Nous contacter
-          </a>
-        </div>
+    <HeroSection
+      image={heroImg}
+      imageAlt="Ambiance chaleureuse de l'Espace Satya à Elne"
+      height="full"
+      showScrollHint
+    >
+      <p class="font-accent text-sage-200 text-2xl mb-4">Bienvenue à l'</p>
+      <h1 class="font-heading text-6xl md:text-8xl font-light text-white mb-4 leading-tight tracking-wide">
+        Espace Satya
+      </h1>
+      <p class="font-heading text-xl md:text-2xl font-light text-warm-200 mb-3">
+        Cabinet pluridisciplinaire de bien-être
+      </p>
+      <p class="font-body text-warm-300 mb-10 flex items-center justify-center gap-2">
+        <Icon name="location" class="w-4 h-4 text-sage-300 shrink-0" strokeWidth={1.5} />
+        17 bd des Évadés de France — Elne (66)
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href={`${base}praticiens/`} size="lg" shadow="lg" class="justify-center">
+          Découvrir nos praticien·ne·s
+          <Icon name="chevron-right" class="w-5 h-5" />
+        </Button>
+        <a href={`${base}contact/`}
+           class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-body font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all duration-300">
+          Nous contacter
+        </a>
       </div>
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
-        <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
-    </section>
+    </HeroSection>
 
     <!-- ═══ PRÉSENTATION ══════════════════════════════════════════════════ -->
     <section class="py-16 md:py-24 px-4 md:px-8 bg-warm-50">
@@ -108,9 +77,7 @@ const valeurs = [
             <a href={`${base}contact/`}
                class="inline-flex items-center gap-2 mt-8 font-body font-semibold text-sage-600 hover:text-sage-700 transition-colors">
               Venir nous voir
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <Icon name="chevron-right" class="w-5 h-5" />
             </a>
           </div>
           <div class="relative">
@@ -131,15 +98,7 @@ const valeurs = [
         <SectionHeader subtitle="Notre philosophie" subtitleColor="sage" title="Ce qui nous rassemble" titleSize="3xl-4xl" />
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           {valeurs.map((v) => (
-            <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-warm-200/50">
-              <IconBadge size="lg" centered class="mb-5">
-                <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={v.iconPath} />
-                </svg>
-              </IconBadge>
-              <h3 class="font-heading text-xl font-semibold text-warm-900 mb-3">{v.titre}</h3>
-              <p class="font-body text-warm-600 text-sm leading-relaxed">{v.texte}</p>
-            </div>
+            <InfoCard icon={v.icon} title={v.titre} description={v.texte} size="lg" />
           ))}
         </div>
       </div>
@@ -174,54 +133,47 @@ const valeurs = [
           <a href={`${base}praticiens/`}
              class="inline-flex items-center gap-2 font-body font-semibold text-sage-700 border-2 border-sage-600 px-8 py-3 rounded-full hover:bg-sage-700 hover:text-white hover:border-sage-700 transition-all duration-300">
             Voir tous les profils
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
+            <Icon name="chevron-right" class="w-5 h-5" />
           </a>
         </div>
       </div>
     </section>
 
     <!-- ═══ SALLE B3 ══════════════════════════════════════════════════════ -->
-    <section class="relative py-20 md:py-28 px-4 md:px-8 bg-sage-700 overflow-hidden">
-      <div class="absolute inset-0 opacity-5" aria-hidden="true">
+    <CtaSection title="La Salle B3" subtitle="Espace à louer" bgClass="bg-sage-700"
+      description="38 m² climatisés au cœur d'un cabinet de bien-être."
+    >
+      <div slot="background" class="absolute inset-0 opacity-5" aria-hidden="true">
         <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.8) 1px, transparent 0); background-size: 32px 32px;"></div>
       </div>
-      <div class="relative max-w-3xl mx-auto text-center">
-        <p class="font-accent text-sage-200 text-xl mb-3">Espace à louer</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-light text-white mb-5 leading-tight">La Salle B3</h2>
-        <p class="font-body text-sage-100 text-lg leading-relaxed mb-2">38 m² climatisés au cœur d'un cabinet de bien-être.</p>
-        <p class="font-body text-sage-200 leading-relaxed mb-10 max-w-2xl mx-auto">
-          Cours collectifs, ateliers, formations ou conférences — bénéficiez d'un cadre professionnel et d'une clientèle déjà sensibilisée au bien-être.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 mb-10">
-          {[
-            { label: '38 m²', desc: 'Surface' },
-            { label: '15 pers.', desc: 'Capacité' },
-            { label: '15 €/h', desc: 'À partir de' },
-            { label: 'Clim.', desc: 'Individuelle' },
-          ].map((item) => (
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 text-center min-w-[110px]">
-              <p class="font-heading text-white text-2xl font-semibold">{item.label}</p>
-              <p class="font-body text-sage-200 text-xs mt-1">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href={`${base}salle/`}
-             class="inline-flex items-center justify-center gap-2 bg-white text-sage-700 font-body font-semibold px-8 py-4 rounded-full hover:bg-warm-50 transition-all duration-300 shadow-lg hover:-translate-y-0.5">
-            Découvrir la salle
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-          <a href={`${base}contact/`}
-             class="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/50 font-body font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-300">
-            Demander un tarif
-          </a>
-        </div>
+      <p class="font-body text-sage-200 leading-relaxed mb-10 max-w-2xl mx-auto">
+        Cours collectifs, ateliers, formations ou conférences — bénéficiez d'un cadre professionnel et d'une clientèle déjà sensibilisée au bien-être.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-10">
+        {[
+          { label: '38 m²', desc: 'Surface' },
+          { label: '15 pers.', desc: 'Capacité' },
+          { label: '15 €/h', desc: 'À partir de' },
+          { label: 'Clim.', desc: 'Individuelle' },
+        ].map((item) => (
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 text-center min-w-[110px]">
+            <p class="font-heading text-white text-2xl font-semibold">{item.label}</p>
+            <p class="font-body text-sage-200 text-xs mt-1">{item.desc}</p>
+          </div>
+        ))}
       </div>
-    </section>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`${base}salle/`}
+           class="inline-flex items-center justify-center gap-2 bg-white text-sage-700 font-body font-semibold px-8 py-4 rounded-full hover:bg-warm-50 transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+          Découvrir la salle
+          <Icon name="chevron-right" class="w-5 h-5" />
+        </a>
+        <a href={`${base}contact/`}
+           class="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white/50 font-body font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-300">
+          Demander un tarif
+        </a>
+      </div>
+    </CtaSection>
 
     <!-- ═══ ACCÈS ══════════════════════════════════════════════════════════ -->
     <section class="py-16 px-4 md:px-8 bg-warm-100">
@@ -230,42 +182,18 @@ const valeurs = [
         <p class="font-body text-warm-500 mb-8">Facilement accessible depuis Perpignan et la côte méditerranéenne.</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
           {[
-            {
-              title: 'Adresse',
-              content: '17 bd des Évadés de France\n1er étage — Épicentre\n66200 Elne',
-              path: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z',
-            },
-            {
-              title: 'Horaires',
-              content: 'Lundi — Samedi\nsur rendez-vous',
-              path: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
-            },
-            {
-              title: 'Accès',
-              content: 'Parking gratuit\n15 min de Perpignan\n10 min d\'Argelès',
-              path: 'M13 10V3L4 14h7v7l9-11h-7z',
-            },
+            { icon: 'location', title: 'Adresse', content: '17 bd des Évadés de France\n1er étage — Épicentre\n66200 Elne' },
+            { icon: 'clock', title: 'Horaires', content: 'Lundi — Samedi\nsur rendez-vous' },
+            { icon: 'lightning', title: 'Accès', content: 'Parking gratuit\n15 min de Perpignan\n10 min d\'Argelès' },
           ].map((item) => (
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-warm-200/50">
-              <IconBadge centered class="mb-4">
-                <svg class="w-6 h-6 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.path} />
-                </svg>
-              </IconBadge>
-              <h3 class="font-heading text-lg font-semibold text-warm-900 mb-2">{item.title}</h3>
-              <p class="font-body text-warm-500 text-sm leading-relaxed whitespace-pre-line">{item.content}</p>
-            </div>
+            <InfoCard icon={item.icon} title={item.title} description={item.content} />
           ))}
         </div>
         <Button href={`${base}contact/`} size="lg">
           Voir le plan d'accès
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
+          <Icon name="chevron-right" class="w-5 h-5" />
         </Button>
       </div>
     </section>
 
-  </main>
-  <Footer />
 </BaseLayout>

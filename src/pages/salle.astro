@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
 import SectionHeader from '../components/SectionHeader.astro';
-import IconBadge from '../components/IconBadge.astro';
+import InfoCard from '../components/InfoCard.astro';
+import HeroSection from '../components/HeroSection.astro';
 import { Image } from 'astro:assets';
 
 import salleImg1 from '../assets/photos/DSC_8979.jpg';
@@ -32,12 +32,12 @@ const forfaits = [
 ];
 
 const equipements = [
-  { label: '38 m²', desc: 'Surface dégagée', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' },
-  { label: '15 pers.', desc: 'Capacité maximale', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
-  { label: 'Climatisation', desc: 'Individuelle, toute l\'année', icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' },
-  { label: 'Parking', desc: 'Gratuit, sur place', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
-  { label: 'Wi-Fi', desc: 'Inclus dans la location', icon: 'M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0' },
-  { label: 'Équipement', desc: 'Chaises, tables, enceinte BT', icon: 'M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2' },
+  { icon: 'building', label: '38 m²', desc: 'Surface dégagée' },
+  { icon: 'users', label: '15 pers.', desc: 'Capacité maximale' },
+  { icon: 'sun', label: 'Climatisation', desc: "Individuelle, toute l'année" },
+  { icon: 'lightning', label: 'Parking', desc: 'Gratuit, sur place' },
+  { icon: 'wifi', label: 'Wi-Fi', desc: 'Inclus dans la location' },
+  { icon: 'table', label: 'Équipement', desc: 'Chaises, tables, enceinte BT' },
 ];
 
 const usages = [
@@ -54,29 +54,21 @@ const usages = [
   title="La Salle B3"
   description="Louez la Salle B3 de l'Espace Satya à Elne : 38 m² climatisés pour vos cours collectifs, ateliers, formations. À partir de 15€/h. Parking gratuit."
 >
-  <Header />
-  <main>
 
     <!-- Hero -->
-    <section class="relative min-h-[60vh] flex items-end pb-12 overflow-hidden">
-      <Image
-        src={salleImg1}
-        alt="La Salle B3 de l'Espace Satya à Elne"
-        width={1920}
-        height={900}
-        class="absolute inset-0 w-full h-full object-cover"
-        loading="eager"
-        quality={80}
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-warm-900/80 via-warm-900/40 to-transparent"></div>
-      <div class="relative z-10 max-w-5xl mx-auto px-4 md:px-8 w-full">
-        <p class="font-accent text-sage-200 text-xl mb-2">Espace à louer</p>
-        <h1 class="font-heading text-5xl md:text-7xl font-light text-white mb-3 leading-tight">La Salle B3</h1>
-        <p class="font-body text-warm-200 text-lg max-w-xl">
-          38 m² climatisés au cœur de l'Espace Satya — idéale pour vos cours collectifs, ateliers et formations.
-        </p>
-      </div>
-    </section>
+    <HeroSection
+      image={salleImg1}
+      imageAlt="La Salle B3 de l'Espace Satya à Elne"
+      overlayClass="bg-gradient-to-t from-warm-900/80 via-warm-900/40 to-transparent"
+      contentAlign="bottom"
+      contentMaxWidth="max-w-5xl"
+    >
+      <p class="font-accent text-sage-200 text-xl mb-2">Espace à louer</p>
+      <h1 class="font-heading text-5xl md:text-7xl font-light text-white mb-3 leading-tight">La Salle B3</h1>
+      <p class="font-body text-warm-200 text-lg max-w-xl">
+        38 m² climatisés au cœur de l'Espace Satya — idéale pour vos cours collectifs, ateliers et formations.
+      </p>
+    </HeroSection>
 
     <!-- Caractéristiques -->
     <section class="py-16 md:py-20 px-4 md:px-8 bg-warm-50">
@@ -87,15 +79,7 @@ const usages = [
         />
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
           {equipements.map((item) => (
-            <div class="bg-white rounded-2xl p-5 text-center shadow-sm border border-warm-200/50">
-              <IconBadge size="sm" centered class="mb-3">
-                <svg class="w-5 h-5 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.icon} />
-                </svg>
-              </IconBadge>
-              <p class="font-heading text-warm-900 font-semibold text-sm">{item.label}</p>
-              <p class="font-body text-warm-400 text-xs mt-1 leading-snug">{item.desc}</p>
-            </div>
+            <InfoCard icon={item.icon} title={item.label} description={item.desc} size="sm" />
           ))}
         </div>
 
@@ -120,9 +104,7 @@ const usages = [
                 'Image professionnelle et cadre apaisant',
               ].map((avantage) => (
                 <li class="flex items-start gap-3 font-body text-sm text-warm-600">
-                  <svg class="w-5 h-5 text-sage-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Icon name="check" class="w-5 h-5 text-sage-500 mt-0.5 shrink-0" />
                   {avantage}
                 </li>
               ))}
@@ -264,9 +246,7 @@ const usages = [
             href="mailto:contact@espacesatya.fr?subject=Demande%20de%20réservation%20Salle%20B3"
             size="lg"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
+            <Icon name="email" class="w-5 h-5" strokeWidth={1.5} />
             Envoyer ma demande par email
           </Button>
           <p class="font-body text-xs text-warm-500 mt-4">contact@espacesatya.fr</p>
@@ -274,6 +254,4 @@ const usages = [
       </div>
     </section>
 
-  </main>
-  <Footer />
 </BaseLayout>

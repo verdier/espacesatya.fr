@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  bgClass?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  bgClass = 'bg-gradient-to-r from-sage-600 to-sage-700',
+} = Astro.props;
+---
+
+<section class:list={['relative py-20 md:py-28 px-4 md:px-8 overflow-hidden', bgClass]}>
+  <slot name="background" />
+  <div class="relative max-w-3xl mx-auto text-center">
+    {subtitle && (
+      <p class="font-accent text-sage-200 text-xl mb-3">{subtitle}</p>
+    )}
+    <h2 class="font-heading text-4xl md:text-5xl font-light text-white mb-5 leading-tight">{title}</h2>
+    {description && (
+      <p class="font-body text-sage-100 text-lg leading-relaxed mb-2 max-w-2xl mx-auto">{description}</p>
+    )}
+    <slot />
+  </div>
+</section>

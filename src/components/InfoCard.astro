@@ -1,0 +1,73 @@
+---
+import Icon from './Icon.astro';
+import IconBadge from './IconBadge.astro';
+
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  variant?: 'centered' | 'left';
+  size?: 'sm' | 'md' | 'lg';
+  iconColor?: string;
+  iconBg?: string;
+}
+
+const {
+  icon,
+  title,
+  description,
+  variant = 'centered',
+  size = 'md',
+  iconColor = 'text-sage-600',
+  iconBg,
+} = Astro.props;
+
+const SIZE_CONFIG = {
+  sm: {
+    padding: 'p-5',
+    badgeSize: 'sm' as const,
+    iconClass: 'w-5 h-5',
+    badgeMargin: 'mb-3',
+    titleClass: 'font-heading text-warm-900 font-semibold text-sm',
+    titleTag: 'p' as const,
+    descClass: 'font-body text-warm-400 text-xs mt-1 leading-snug',
+  },
+  md: {
+    padding: 'p-6',
+    badgeSize: 'md' as const,
+    iconClass: 'w-6 h-6',
+    badgeMargin: 'mb-4',
+    titleClass: 'font-heading text-lg font-semibold text-warm-900 mb-2',
+    titleTag: 'h3' as const,
+    descClass: 'font-body text-warm-500 text-sm leading-relaxed whitespace-pre-line',
+  },
+  lg: {
+    padding: 'p-8',
+    badgeSize: 'lg' as const,
+    iconClass: 'w-7 h-7',
+    badgeMargin: 'mb-5',
+    titleClass: 'font-heading text-xl font-semibold text-warm-900 mb-3',
+    titleTag: 'h3' as const,
+    descClass: 'font-body text-warm-600 text-sm leading-relaxed',
+  },
+} as const;
+
+const config = SIZE_CONFIG[size];
+const isCentered = variant === 'centered';
+---
+
+<div class:list={[
+  'bg-white rounded-2xl shadow-sm border border-warm-200/50',
+  config.padding,
+  isCentered && 'text-center',
+]}>
+  <IconBadge size={config.badgeSize} centered={isCentered} class={config.badgeMargin}>
+    <Icon name={icon} class={`${config.iconClass} ${iconColor}`} strokeWidth={1.5} />
+  </IconBadge>
+  {config.titleTag === 'h3' ? (
+    <h3 class={config.titleClass}>{title}</h3>
+  ) : (
+    <p class={config.titleClass}>{title}</p>
+  )}
+  <p class={config.descClass}>{description}</p>
+</div>

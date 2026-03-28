@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  image: ImageMetadata;
+  imageAlt: string;
+  height?: 'full' | 'large' | 'medium';
+  overlayClass?: string;
+  contentAlign?: 'center' | 'bottom';
+  contentMaxWidth?: string;
+  showScrollHint?: boolean;
+}
+
+const {
+  image,
+  imageAlt,
+  height = 'large',
+  overlayClass = 'bg-gradient-to-br from-warm-900/75 via-warm-800/55 to-sage-900/40',
+  contentAlign = 'center',
+  contentMaxWidth = 'max-w-4xl',
+  showScrollHint = false,
+} = Astro.props;
+
+const HEIGHT_CLASSES: Record<string, string> = {
+  full: 'min-h-[88vh]',
+  large: 'min-h-[60vh]',
+  medium: 'min-h-[40vh]',
+};
+
+const ALIGN_CLASSES: Record<string, string> = {
+  center: 'items-center justify-center',
+  bottom: 'items-end pb-12',
+};
+
+const CONTENT_CLASSES: Record<string, string> = {
+  center: 'text-center px-4 mx-auto',
+  bottom: 'px-4 md:px-8 w-full mx-auto',
+};
+---
+
+<section class:list={['relative flex overflow-hidden', HEIGHT_CLASSES[height], ALIGN_CLASSES[contentAlign]]}>
+  <Image
+    src={image}
+    alt={imageAlt}
+    width={1920}
+    height={height === 'full' ? 1080 : 900}
+    class="absolute inset-0 w-full h-full object-cover"
+    loading="eager"
+    decoding="async"
+    quality={80}
+  />
+  <div class:list={['absolute inset-0', overlayClass]} />
+  <div class:list={['relative z-10', contentMaxWidth, CONTENT_CLASSES[contentAlign]]}>
+    <slot />
+  </div>
+  {showScrollHint && (
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
+      <Icon name="chevron-down" class="w-6 h-6 text-white/50" strokeWidth={1.5} />
+    </div>
+  )}
+</section>

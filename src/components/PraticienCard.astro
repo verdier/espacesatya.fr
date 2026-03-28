@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
+import Icon from './Icon.astro';
 
 interface Props {
   nom: string;
@@ -98,9 +99,7 @@ const href = `${base}praticiens/${slug}/`;
     <div class="flex items-center justify-end mt-4">
       <span class="inline-flex items-center gap-1.5 font-body text-sm font-semibold text-sage-600 group-hover:text-sage-700 group-hover:gap-2.5 transition-all duration-200">
         Découvrir
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
+        <Icon name="chevron-right" class="w-4 h-4" />
       </span>
     </div>
   </div>
