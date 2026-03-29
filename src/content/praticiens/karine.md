@@ -29,7 +29,7 @@ tarifs:
     prix: "650 €"
     note: "Paiement possible en plusieurs fois"
   - prestation: "Soins à distance"
-    description: "Disponibles à l'aide d'une photo, par SMS ou WhatsApp."
+    description: "Réalisées en visio via WhatsApp."
 photo: "../../assets/photos/praticiens/karine-1.jpg"
 photoAlt: "Karine, praticienne en soins énergétiques et magnétisme à l'Espace Satya d'Elne"
 ordre: 5
