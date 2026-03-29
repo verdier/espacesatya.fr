@@ -101,10 +101,23 @@ const needsPopover = description && description.length > 80;
     inset: 0;
     height: fit-content;
     position: fixed;
+    z-index: 100;
   }
 
   .tarif-popover::backdrop {
+    background: transparent;
+  }
+
+  .tarif-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
     background: rgba(0,0,0,.25);
+    z-index: 99;
+  }
+
+  .tarif-overlay.active {
+    display: block;
   }
 
   .tarif-popover-close {
@@ -124,28 +137,42 @@ const needsPopover = description && description.length > 80;
 </style>
 
 <script>
+  // Create a single shared overlay
+  let overlay = document.getElementById('tarif-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'tarif-overlay';
+    overlay.className = 'tarif-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.tarif-popover').forEach(p => (p as HTMLElement).hidePopover?.());
+    overlay!.classList.remove('active');
+  }
+
+  overlay.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeAll();
+  });
+
   document.addEventListener('click', (e) => {
     const trigger = (e.target as HTMLElement).closest('[data-popover-trigger]') as HTMLElement | null;
     if (trigger) {
       e.preventDefault();
-      // Close any open popover first
-      document.querySelectorAll('.tarif-popover').forEach(p => (p as HTMLElement).hidePopover?.());
+      closeAll();
       const id = trigger.dataset.popoverTrigger;
       const popover = id ? document.getElementById(id) : null;
-      popover?.showPopover?.();
+      if (popover) {
+        popover.showPopover?.();
+        overlay!.classList.add('active');
+      }
       return;
     }
 
     const closeBtn = (e.target as HTMLElement).closest('[data-popover-close]');
     if (closeBtn) {
-      const popover = closeBtn.closest('.tarif-popover') as HTMLElement | null;
-      popover?.hidePopover?.();
-      return;
-    }
-
-    // Click on backdrop closes all
-    if ((e.target as HTMLElement).matches('.tarif-popover')) {
-      (e.target as HTMLElement).hidePopover?.();
+      closeAll();
     }
   });
 </script>
