@@ -39,24 +39,12 @@ const base = import.meta.env.BASE_URL;
     <section class="py-16 md:py-20 px-4 md:px-8 bg-warm-50">
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {praticiens.map((p) => (
-            <PraticienCard
-              nom={p.data.nom}
-              titre={p.data.titre}
-              sousTitre={p.data.sousTitre}
-              slug={p.id}
-              photo={p.data.photo}
-              photoAlt={p.data.photoAlt}
-              accroche={p.data.accroche}
-              specialites={p.data.specialites}
-              telephone={p.data.telephone}
-              email={p.data.email}
-              doctolib={p.data.doctolib}
-              siteWeb={p.data.siteWeb}
-              nouveau={p.data.nouveau}
-              variant="full"
-            />
-          ))}
+          {praticiens.map((p) => {
+            const { description, tarifs, ordre, actif, ...cardProps } = p.data;
+            return (
+              <PraticienCard {...cardProps} slug={p.id} variant="full" />
+            );
+          })}
         </div>
       </div>
     </section>

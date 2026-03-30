@@ -17,6 +17,22 @@ praticiens.sort((a, b) => a.data.ordre - b.data.ordre);
 
 const base = import.meta.env.BASE_URL;
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Espace Satya",
+  "description": "Cabinet pluridisciplinaire de bien-être à Elne. Yoga, sophrologie, soins énergétiques, massages, hypnothérapie et diététique.",
+  "url": "https://espacesatya.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "17 boulevard des Évadés de France",
+    "addressLocality": "Elne",
+    "postalCode": "66200",
+    "addressCountry": "FR"
+  },
+  "hasMap": "https://maps.google.com/?q=Espace+Satya+Elne"
+};
+
 const valeurs = [
   { icon: 'heroicons:heart', titre: "Approche holistique", texte: "Nous considérons la personne dans sa globalité : corps, esprit, émotions, pour un accompagnement qui touche à la racine des choses." },
   { icon: 'heroicons:users', titre: "Pluridisciplinarité", texte: "Sept praticiennes aux expertises complémentaires, qui collaborent pour vous offrir un accompagnement coordonné et cohérent." },
@@ -28,6 +44,8 @@ const valeurs = [
   title="Accueil"
   description="Espace Satya, cabinet pluridisciplinaire de bien-être à Elne. Yoga, psychologie, sophrologie, hypnothérapie, massages, soins énergétiques et diététique."
 >
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
     <HomeHero />
@@ -86,24 +104,12 @@ const valeurs = [
           description="Sept spécialistes du bien-être qui partagent une vision commune : vous accompagner avec bienveillance vers votre mieux-être."
         />
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {praticiens.map((p) => (
-            <PraticienCard
-              nom={p.data.nom}
-              titre={p.data.titre}
-              sousTitre={p.data.sousTitre}
-              slug={p.id}
-              photo={p.data.photo}
-              photoAlt={p.data.photoAlt}
-              accroche={p.data.accroche}
-              specialites={p.data.specialites}
-              telephone={p.data.telephone}
-              email={p.data.email}
-              doctolib={p.data.doctolib}
-              siteWeb={p.data.siteWeb}
-              nouveau={p.data.nouveau}
-              variant="compact"
-            />
-          ))}
+          {praticiens.map((p) => {
+            const { description, tarifs, ordre, actif, ...cardProps } = p.data;
+            return (
+              <PraticienCard {...cardProps} slug={p.id} variant="compact" />
+            );
+          })}
         </div>
         <div class="text-center mt-10">
           <a href={`${base}praticiens/`}

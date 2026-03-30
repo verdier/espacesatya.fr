@@ -28,7 +28,7 @@ const next = currentIdx < allPraticiens.length - 1 ? allPraticiens[currentIdx + 
 
 <BaseLayout
   title={`${praticien.data.nom}, ${praticien.data.titre}`}
-  description={praticien.data.accroche}
+  description={praticien.data.description ?? praticien.data.accroche}
 >
 
     <PraticienHero praticien={praticien.data} base={base} />
