@@ -69,8 +69,9 @@ const base = import.meta.env.BASE_URL;
 
       <!-- Right: Hero Image with organic shape -->
       <div class="order-2 relative flex justify-center lg:justify-end py-8">
-        <!-- Decorative ring behind image -->
+        <!-- Decorative geometry — two offset rotated squares -->
         <div class="absolute top-2 right-2 w-[90%] h-[90%] rounded-[2rem] border-2 border-terra-200/50 rotate-3 hidden lg:block" aria-hidden="true"></div>
+        <div class="absolute top-6 -left-6 w-[85%] h-[85%] rounded-[2rem] border border-sage-200/40 -rotate-3 hidden lg:block" aria-hidden="true"></div>
 
 
         <!-- Image container with organic rounded shape -->
@@ -89,12 +90,26 @@ const base = import.meta.env.BASE_URL;
             <div class="absolute inset-0 bg-gradient-to-t from-warm-900/15 via-transparent to-sage-900/5" aria-hidden="true"></div>
           </div>
 
-          <!-- Small floating accent badge -->
+          <!-- Floating pill badges -->
           <div class="absolute -bottom-2 -left-2 lg:-bottom-3 lg:-left-4 bg-white rounded-2xl shadow-lg shadow-warm-200/40 px-5 py-3 flex items-center gap-2 z-10">
             <div class="w-8 h-8 rounded-full bg-sage-100 flex items-center justify-center">
               <Icon name="heroicons:heart" class="w-4 h-4 text-sage-600" />
             </div>
             <span class="font-accent text-warm-700 text-lg">Bien-être holistique</span>
+          </div>
+
+          <div class="absolute top-12 -left-10 lg:top-16 lg:-left-16 bg-white rounded-2xl shadow-lg shadow-warm-200/40 px-4 py-2.5 flex items-center gap-2 z-10">
+            <div class="w-7 h-7 rounded-full bg-terra-100 flex items-center justify-center">
+              <Icon name="heroicons:user-group" class="w-3.5 h-3.5 text-terra-600" />
+            </div>
+            <span class="font-accent text-warm-700 text-base">7 praticiennes</span>
+          </div>
+
+          <div class="absolute top-1/2 -right-4 lg:-right-8 bg-white rounded-2xl shadow-lg shadow-warm-200/40 px-4 py-2.5 flex items-center gap-2 z-10 hidden lg:flex">
+            <div class="w-7 h-7 rounded-full bg-sage-100 flex items-center justify-center">
+              <Icon name="heroicons:sparkles" class="w-3.5 h-3.5 text-sage-600" />
+            </div>
+            <span class="font-accent text-warm-700 text-base">Elne, 66</span>
           </div>
         </div>
       </div>
